@@ -1,0 +1,141 @@
+/* Readability overrides for the stock MkDocs `readthedocs` theme.
+   Targets from the brief: body 16-18px, line height 1.5, about 70 characters
+   per line, sans-serif, no all caps, off-white background, dark mode.
+   The stock theme has no dark mode (no prefers-color-scheme rule in
+   theme.css), so the dark palette below is added here. */
+
+:root {
+  --spp-bg: #fbf8f1;          /* off-white page */
+  --spp-text: #262626;
+  --spp-muted: #5a5a5a;
+  --spp-link: #1f5f99;
+  --spp-link-visited: #6a3d8f;
+  --spp-side-bg: #2b2a33;
+  --spp-side-text: #e6e3dc;
+  --spp-side-caption: #c9b98a;
+  --spp-brand: #1f5f99;
+  --spp-note-bg: #eaf1f7;
+  --spp-warn-bg: #fbefe1;
+  --spp-stuck-bg: #f1ecf8;
+  --spp-code-bg: #efebe2;
+  --spp-border: #ddd6c8;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --spp-bg: #1d1c22;
+    --spp-text: #e9e6df;
+    --spp-muted: #b9b4aa;
+    --spp-link: #8cc1f0;
+    --spp-link-visited: #c9a8e8;
+    --spp-side-bg: #141318;
+    --spp-side-text: #ddd9d0;
+    --spp-side-caption: #d8c58f;
+    --spp-brand: #2c5d8a;
+    --spp-note-bg: #22303d;
+    --spp-warn-bg: #3a2c1c;
+    --spp-stuck-bg: #2e2638;
+    --spp-code-bg: #2a2930;
+    --spp-border: #3a3842;
+  }
+}
+
+/* Page and body text */
+body,
+.wy-body-for-nav,
+.wy-nav-content-wrap {
+  background: var(--spp-bg);
+}
+.wy-nav-content {
+  background: var(--spp-bg);
+  color: var(--spp-text);
+  max-width: 52rem;
+}
+.rst-content {
+  font-size: 17px;
+  line-height: 1.5;
+  color: var(--spp-text);
+}
+.rst-content p,
+.rst-content li,
+.rst-content figcaption,
+.rst-content .admonition {
+  max-width: 70ch;
+}
+.rst-content p { margin-bottom: 1em; }
+.rst-content li { margin-bottom: 0.35em; }
+
+/* Bold for emphasis. Italics are harder to read for many readers. */
+.rst-content em { font-style: normal; font-weight: 600; }
+
+/* Headings: H2 page title, H4 per feature, as on the Hair Tool site */
+.rst-content h2 { font-size: 1.75em; margin-top: 0; }
+.rst-content h3 { font-size: 1.35em; margin-top: 1.6em; }
+.rst-content h4 { font-size: 1.15em; margin-top: 1.6em; }
+.rst-content h2, .rst-content h3, .rst-content h4 { color: var(--spp-text); }
+
+/* Links */
+.rst-content a { color: var(--spp-link); text-decoration: underline; text-underline-offset: 2px; }
+.rst-content a:visited { color: var(--spp-link-visited); }
+
+/* Applies-to line sits directly under the title */
+.rst-content h2 + p { color: var(--spp-muted); font-size: 0.95em; }
+
+/* Sidebar: no all caps on group labels */
+.wy-nav-side { background: var(--spp-side-bg); }
+.wy-menu-vertical p.caption {
+  text-transform: none;
+  font-size: 95%;
+  color: var(--spp-side-caption);
+}
+.wy-menu-vertical a { color: var(--spp-side-text); font-size: 15px; }
+.wy-side-nav-search,
+.wy-nav-top { background-color: var(--spp-brand); }
+
+/* Callouts */
+.rst-content .admonition { border-radius: 4px; line-height: 1.5; }
+.rst-content .note,
+.rst-content .admonition.info { background: var(--spp-note-bg); }
+.rst-content .warning { background: var(--spp-warn-bg); }
+.rst-content .admonition.stuck { background: var(--spp-stuck-bg); }
+.rst-content .admonition-title { text-transform: none; }
+
+/* Code and keys */
+.rst-content code { background: var(--spp-code-bg); color: var(--spp-text); border-color: var(--spp-border); font-size: 0.9em; }
+
+/* Tables */
+.rst-content table.docutils,
+.rst-content table { color: var(--spp-text); }
+.rst-content table td, .rst-content table th { white-space: normal; padding: 8px 12px; border-color: var(--spp-border); }
+.wy-table-odd td, .rst-content table tr:nth-child(2n-1) td { background-color: transparent; }
+
+/* Media embeds from macros/main.py */
+.spp-media { margin: 1.5em 0; }
+.spp-media video,
+.spp-media img { max-width: 100%; height: auto; border: 1px solid var(--spp-border); border-radius: 4px; }
+.spp-media figcaption { color: var(--spp-muted); font-size: 0.95em; margin-top: 0.4em; }
+.spp-steps-link { white-space: nowrap; margin-left: 0.4em; }
+.spp-media-pending {
+  border: 2px dashed var(--spp-border);
+  border-radius: 4px;
+  padding: 1em;
+  margin: 1.5em 0;
+  color: var(--spp-muted);
+  max-width: 70ch;
+}
+
+/* Footer and prev/next */
+footer, .rst-footer-buttons { color: var(--spp-muted); }
+
+/* Active page in the sidebar: the stock theme paints it light grey, which
+   glares in dark mode. */
+@media (prefers-color-scheme: dark) {
+  .wy-menu-vertical li.current,
+  .wy-menu-vertical li.toctree-l1.current > a,
+  .wy-menu-vertical li.current a {
+    background: #2a2930;
+    color: var(--spp-side-text);
+    border-color: #3a3842;
+  }
+  .wy-menu-vertical li.current a:hover { background: #34333c; }
+}

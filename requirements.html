@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="img/favicon.ico" />
+    <title>Requirements And Compatibility - Parting Placer Guide</title>
+    <link rel="stylesheet" href="css/theme.css" />
+    <link rel="stylesheet" href="css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+        <link href="css/extra.css" rel="stylesheet" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Requirements And Compatibility";
+        var mkdocs_page_input_path = "requirements.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="index.html" class="icon icon-home"> Parting Placer Guide
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="./search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="index.html">Welcome</a>
+                </li>
+              </ul>
+              <ul class="current">
+                <li class="toctree-l1 current"><a class="reference internal current" href="#">Requirements And Compatibility</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#what-you-need">What You Need</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#compatibility">Compatibility</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#addon-version">Finding Your Add-on Version</a>
+    </li>
+    </ul>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="install.html">Install, Update, Uninstall</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Getting Started</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="quickstart.html">Your First Parting In 10 Minutes</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Main Concepts</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="concepts/how-a-parting-works.html">How A Parting Is Built</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="concepts/live-preview-frozen.html">Live, Preview And Frozen Partings</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="concepts/what-baking-produces.html">What Baking Produces</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="concepts/alpha.html">Straight Vs Premultiplied Alpha</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="concepts/styles.html">Styles</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">How-To</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="howto/place-partings.html">Place Partings</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="howto/mirror-partings.html">Mirror Partings</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="howto/several-at-once.html">Work On Several Partings At Once</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="howto/match-appearance.html">Make Every Parting Match</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="howto/viewport-speed.html">Keep The Viewport Fast</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="howto/mirror-modifier.html">Work On A Head With A Mirror Modifier</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="howto/bake-and-save.html">Bake And Save Textures</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="howto/transparent-export.html">Export A Transparent Overlay</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="howto/styles.html">Save And Switch Parting Styles</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="howto/repair-reset.html">Repair Or Reset A Head</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Panel Reference</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="reference/header.html">Panel Header</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="reference/target.html">Target And Styles</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="reference/placement-keys.html">Place Parting And Placement Keys</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="reference/preview.html">Preview</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="reference/parting-list.html">Parting List</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="reference/appearance.html">Appearance</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="reference/parting-parameters.html">Parting Parameters</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="reference/bake.html">Bake</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="reference/save.html">Saving Textures</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="reference/orphan-stamps.html">Orphan Stamps Warning</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Help</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="help/troubleshooting.html">Troubleshooting</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="help/glossary.html">Glossary</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="help/changelog.html">Changelog</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Parting Placer Guide</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="index.html" class="icon icon-home" aria-label="Docs"></a></li>
+      <li class="breadcrumb-item active">Requirements And Compatibility</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h2 id="requirements-and-compatibility">Requirements And Compatibility<a class="headerlink" href="#requirements-and-compatibility" title="Permanent link">&para;</a></h2>
+<p><strong>Applies to:</strong> Parting Placer V2.0.0 · Blender 4.4 · 5.2</p>
+<p>Check this page before you install, and again before you change Blender version.</p>
+<h4 id="what-you-need">What You Need<a class="headerlink" href="#what-you-need" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Blender 4.4 or 5.2. See <a href="#compatibility">Compatibility</a> for other versions.</li>
+<li>A mesh head with a material and a UV map.</li>
+<li><strong>Material Preview</strong> or <strong>Rendered</strong> viewport shading. Partings are invisible in <strong>Solid</strong> shading.</li>
+</ul>
+<p>The UV map matters most when you bake. Baking writes into the head's UV layout, so the bake cannot run without one.</p>
+
+
+<h4 id="compatibility">Compatibility<a class="headerlink" href="#compatibility" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Blender</th>
+<th>Status</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>4.4</td>
+<td><strong>Tested</strong> on 4.4.3, October 2026</td>
+</tr>
+<tr>
+<td>4.5</td>
+<td><strong>Untested</strong></td>
+</tr>
+<tr>
+<td>5.0</td>
+<td><strong>Untested</strong></td>
+</tr>
+<tr>
+<td>5.1</td>
+<td><strong>Untested</strong></td>
+</tr>
+<tr>
+<td>5.2</td>
+<td><strong>Tested</strong> on 5.2.2, October 2026</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Untested</strong> means nobody has confirmed the add-on works on that version yet. Keep a backup of your file if you try it.</p>
+<p>A file saved in Blender 5.2 does not open in Blender 4.4. If you move between versions, keep a copy saved from 4.4.</p>
+
+
+
+
+<h4 id="addon-version">Finding Your Add-on Version<a class="headerlink" href="#addon-version" title="Permanent link">&para;</a></h4>
+<p>Open <strong>Edit &gt; Preferences &gt; Add-ons</strong> and find <strong>Parting Placer Tool</strong> in the list. The version is shown there.</p>
+
+
+<div class="admonition stuck">
+<p class="admonition-title">If You're Stuck</p>
+<ul>
+<li>No partings showing? See <a href="help/troubleshooting.html#cannot-see-partings">I Cannot See Any Partings</a>.</li>
+<li>Bake button greyed out? See <a href="help/troubleshooting.html#bake-greyed-out">Bake Partings Is Greyed Out Or Refuses</a>.</li>
+</ul>
+</div>
+<p><strong>Recommended next:</strong> <a href="install.html">Install, Update, Uninstall</a></p>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="index.html" class="btn btn-neutral float-left" title="Welcome"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="install.html" class="btn btn-neutral float-right" title="Install, Update, Uninstall">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    
+      <p>Parting Placer Tool · AVILABS by Ebonix</p>
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="index.html" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="install.html" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = ".";</script>
+    <script src="js/theme_extra.js"></script>
+    <script src="js/theme.js"></script>
+      <script src="search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

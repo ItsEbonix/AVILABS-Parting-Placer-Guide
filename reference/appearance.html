@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>Appearance - Parting Placer Guide</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+        <link href="../css/extra.css" rel="stylesheet" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Appearance";
+        var mkdocs_page_input_path = "reference/appearance.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../index.html" class="icon icon-home"> Parting Placer Guide
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../index.html">Welcome</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../requirements.html">Requirements And Compatibility</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../install.html">Install, Update, Uninstall</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Getting Started</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../quickstart.html">Your First Parting In 10 Minutes</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Main Concepts</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../concepts/how-a-parting-works.html">How A Parting Is Built</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../concepts/live-preview-frozen.html">Live, Preview And Frozen Partings</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../concepts/what-baking-produces.html">What Baking Produces</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../concepts/alpha.html">Straight Vs Premultiplied Alpha</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../concepts/styles.html">Styles</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">How-To</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../howto/place-partings.html">Place Partings</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../howto/mirror-partings.html">Mirror Partings</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../howto/several-at-once.html">Work On Several Partings At Once</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../howto/match-appearance.html">Make Every Parting Match</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../howto/viewport-speed.html">Keep The Viewport Fast</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../howto/mirror-modifier.html">Work On A Head With A Mirror Modifier</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../howto/bake-and-save.html">Bake And Save Textures</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../howto/transparent-export.html">Export A Transparent Overlay</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../howto/styles.html">Save And Switch Parting Styles</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../howto/repair-reset.html">Repair Or Reset A Head</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Panel Reference</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="header.html">Panel Header</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="target.html">Target And Styles</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="placement-keys.html">Place Parting And Placement Keys</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="preview.html">Preview</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="parting-list.html">Parting List</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">Appearance</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#link-appearance">Link Appearance</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#hair-color">Hair Color</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#opacity">Opacity</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#divide">Divide</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#hair-roughness">Hair Roughness</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#rough-variation">Rough Variation</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#detail">Detail</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#live-bump">Live Bump</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#bump-strength">Bump Strength</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#bump-distance">Bump Distance</a>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="parting-parameters.html">Parting Parameters</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="bake.html">Bake</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="save.html">Saving Textures</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="orphan-stamps.html">Orphan Stamps Warning</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Help</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../help/troubleshooting.html">Troubleshooting</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../help/glossary.html">Glossary</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../help/changelog.html">Changelog</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Parting Placer Guide</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../index.html" class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">Panel Reference</li>
+      <li class="breadcrumb-item active">Appearance</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h2 id="appearance">Appearance<a class="headerlink" href="#appearance" title="Permanent link">&para;</a></h2>
+<p><strong>Applies to:</strong> Parting Placer V2.0.0 · Blender 4.4 · 5.2</p>
+
+
+<p>These sliders set how a parting looks. Each parting has its own set, unless you link them.</p>
+
+
+<figure class="spp-media spp-figure"><img src="../img/spp-appearance-01-box-v200.png" alt="Global Appearance box with a link icon in its heading, a Hair Color swatch, sliders for Opacity, Divide, Hair Roughness, Rough Variation and Detail, then the Live Bump switch turned off with the line Turn on when baking partings under it" loading="lazy"><figcaption>[1] The Appearance box with Link Appearance on</figcaption></figure>
+
+
+
+<p>The box sits under the parting list, once the head has at least one parting. Its heading tells you what you are editing:</p>
+<table>
+<thead>
+<tr>
+<th>Heading</th>
+<th>Means</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Global Appearance</strong></td>
+<td><strong>Link Appearance</strong> is on. One set of values drives every parting.</td>
+</tr>
+<tr>
+<td><strong>Appearance · Parting 002</strong></td>
+<td><strong>Link Appearance</strong> is off. You are editing the parting named after the dot.</td>
+</tr>
+<tr>
+<td><strong>Appearance</strong></td>
+<td><strong>Link Appearance</strong> is off and no parting is picked. The box says "Select a parting to edit its appearance".</td>
+</tr>
+</tbody>
+</table>
+
+
+<h4 id="link-appearance">Link Appearance<a class="headerlink" href="#link-appearance" title="Permanent link">&para;</a></h4>
+<p>The link icon at the right of the heading. It is off by default.</p>
+<p>Its tooltip reads: <strong>Share appearance settings across all partings.</strong></p>
+<p>Turn it on to give every parting the same look. The values of the first parting in the list become the shared set.</p>
+<p>With it off, each parting keeps its own values. <strong>Copy Settings To All</strong> is then available on each parting. See <a href="parting-parameters.html#copy-settings-to-all">Copy Settings To All</a>.</p>
+<p>Turn it off again and each parting keeps the shared values until you change them. Turning it back on overwrites every parting with the first parting's values.</p>
+
+
+
+
+
+
+<h4 id="hair-color">Hair Color<a class="headerlink" href="#hair-color" title="Permanent link">&para;</a></h4>
+<p>The colour of the parting. The default is a near black.</p>
+<p>A baked colour can come out darker than this swatch, because <strong>Detail</strong> darkens it. See <a href="#detail">Detail</a>.</p>
+
+
+<h4 id="opacity">Opacity<a class="headerlink" href="#opacity" title="Permanent link">&para;</a></h4>
+<p>Default <strong>50</strong>, from 0 to 100.</p>
+<p>How solid the parting is. At <strong>0</strong> it disappears. Raising it fills the parting in, though above about 25 the change is small.</p>
+<p><strong>Opacity</strong> and <strong>Divide</strong> work together. See <a href="#divide">Divide</a>.</p>
+
+
+
+
+
+
+<h4 id="divide">Divide<a class="headerlink" href="#divide" title="Permanent link">&para;</a></h4>
+<p>Default <strong>0.5</strong>, from 0 to 2 on the slider.</p>
+<p>Divides <strong>Opacity</strong>. Raise it to thin the parting out, or lower it to fill it in. At <strong>0</strong> the parting disappears.</p>
+<p>For example, <strong>Opacity</strong> 50 with <strong>Divide</strong> 1 looks the same as <strong>Opacity</strong> 25 with <strong>Divide</strong> 0.5.</p>
+
+
+
+
+
+
+<h4 id="hair-roughness">Hair Roughness<a class="headerlink" href="#hair-roughness" title="Permanent link">&para;</a></h4>
+<p>Default <strong>0.5</strong>, from 0 to 1.</p>
+<p>How matte the parting is. <strong>0</strong> is glossy and <strong>1</strong> is fully matte. It shows in the baked <strong>Roughness</strong> map, and in the viewport wherever your material reflects light.</p>
+
+
+
+
+
+
+<h4 id="rough-variation">Rough Variation<a class="headerlink" href="#rough-variation" title="Permanent link">&para;</a></h4>
+<p>Default <strong>0.5</strong>, from -1 to 4 on the slider.</p>
+<p>Shifts the roughness across the parting. Higher values make the parting glossier overall. It shows in the baked <strong>Roughness</strong> map.</p>
+
+
+
+
+
+
+<h4 id="detail">Detail<a class="headerlink" href="#detail" title="Permanent link">&para;</a></h4>
+<p>Default <strong>1</strong>, from 0 to 2 on the slider.</p>
+<p><strong>Detail</strong> darkens the parting. At <strong>0</strong> the bake matches your <strong>Hair Color</strong> swatch. Higher values make it darker. At <strong>2</strong> it is much darker. Lower <strong>Detail</strong> if you want the bake closer to the swatch.</p>
+
+
+
+
+<h4 id="live-bump">Live Bump<a class="headerlink" href="#live-bump" title="Permanent link">&para;</a></h4>
+<p>The switch at the bottom of the box. It reads <strong>Live Bump: Off</strong> or <strong>Live Bump: On</strong>, and it is off by default.</p>
+<p>Its tooltip reads: <strong>Show parting relief in the viewport. Slower to compile: turn off while placing partings, and on before baking a Normal map.</strong></p>
+<p>Bump is the slowest part of the material for Blender to rebuild, so leave it off while you place partings. Turn it on before you bake, or the <strong>Normal</strong> map has no bump in it. See <a href="bake.html#bake-channels">Color / Normal / Roughness / Alpha</a>.</p>
+<p>The line under the switch tells you which way to set it. While it is off, it reads <strong>Turn on when baking partings</strong>. While it is on, it reads <strong>Turn off whilst placing partings</strong>.</p>
+<p><strong>Bump Strength</strong> and <strong>Bump Distance</strong> show under the switch only while it is on.</p>
+<p>The switch covers every partings material in the file, including parked styles and other heads. It shows even when no parting is picked.</p>
+
+
+
+
+<h4 id="bump-strength">Bump Strength<a class="headerlink" href="#bump-strength" title="Permanent link">&para;</a></h4>
+<p>Shown while <strong>Live Bump</strong> is on.</p>
+<p>Default <strong>1.07</strong>, from 0 to 5 on the slider.</p>
+<p>How strongly the hair texture stands out. At <strong>0</strong> the parting looks flatter and lighter. Higher values make it darker and more textured.</p>
+
+
+
+
+
+
+<h4 id="bump-distance">Bump Distance<a class="headerlink" href="#bump-distance" title="Permanent link">&para;</a></h4>
+<p>Shown while <strong>Live Bump</strong> is on.</p>
+<p>Default <strong>-0.04</strong>, from -1 to 20 on the slider.</p>
+<p>Fine-tunes the bump. Small changes do little. At <strong>20</strong> the parting is a little darker than at the default.</p>
+
+
+
+
+
+
+<div class="admonition info">
+<p class="admonition-title">Where Did Depth Go?</p>
+<p><strong>Depth</strong> was removed from the panel in V1.2.0 and is fixed at 0.5. Partings placed before then keep the value they had. See <a href="../help/troubleshooting.html#depth-slider-gone">The Depth Slider Has Gone</a>.</p>
+</div>
+
+
+<div class="admonition stuck">
+<p class="admonition-title">If You're Stuck</p>
+<ul>
+<li>A slider stops lower than it used to? See <a href="../help/troubleshooting.html#slider-limit">An Appearance Slider Will Not Go As High As It Used To</a>.</li>
+<li>The bake is darker than your colour? See <a href="../help/troubleshooting.html#baked-colour-darker">The Baked Colour Is Darker Than My Hair Color Swatch</a>.</li>
+<li>Anything else: <a href="../help/troubleshooting.html#still-stuck">Still Stuck</a>.</li>
+</ul>
+</div>
+<p><strong>Recommended next:</strong> <a href="parting-parameters.html">Parting Parameters</a></p>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="parting-list.html" class="btn btn-neutral float-left" title="Parting List"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="parting-parameters.html" class="btn btn-neutral float-right" title="Parting Parameters">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    
+      <p>Parting Placer Tool · AVILABS by Ebonix</p>
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="parting-list.html" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="parting-parameters.html" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "..";</script>
+    <script src="../js/theme_extra.js"></script>
+    <script src="../js/theme.js"></script>
+      <script src="../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

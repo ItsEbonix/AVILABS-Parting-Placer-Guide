@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>Troubleshooting - Parting Placer Guide</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+        <link href="../css/extra.css" rel="stylesheet" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Troubleshooting";
+        var mkdocs_page_input_path = "help/troubleshooting.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../index.html" class="icon icon-home"> Parting Placer Guide
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../index.html">Welcome</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../requirements.html">Requirements And Compatibility</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../install.html">Install, Update, Uninstall</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Getting Started</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../quickstart.html">Your First Parting In 10 Minutes</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Main Concepts</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../concepts/how-a-parting-works.html">How A Parting Is Built</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../concepts/live-preview-frozen.html">Live, Preview And Frozen Partings</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../concepts/what-baking-produces.html">What Baking Produces</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../concepts/alpha.html">Straight Vs Premultiplied Alpha</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../concepts/styles.html">Styles</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">How-To</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../howto/place-partings.html">Place Partings</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../howto/mirror-partings.html">Mirror Partings</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../howto/several-at-once.html">Work On Several Partings At Once</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../howto/match-appearance.html">Make Every Parting Match</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../howto/viewport-speed.html">Keep The Viewport Fast</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../howto/mirror-modifier.html">Work On A Head With A Mirror Modifier</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../howto/bake-and-save.html">Bake And Save Textures</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../howto/transparent-export.html">Export A Transparent Overlay</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../howto/styles.html">Save And Switch Parting Styles</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../howto/repair-reset.html">Repair Or Reset A Head</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Panel Reference</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../reference/header.html">Panel Header</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../reference/target.html">Target And Styles</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../reference/placement-keys.html">Place Parting And Placement Keys</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../reference/preview.html">Preview</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../reference/parting-list.html">Parting List</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../reference/appearance.html">Appearance</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../reference/parting-parameters.html">Parting Parameters</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../reference/bake.html">Bake</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../reference/save.html">Saving Textures</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../reference/orphan-stamps.html">Orphan Stamps Warning</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Help</span></p>
+              <ul class="current">
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">Troubleshooting</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#cannot-see-partings">I Cannot See Any Partings</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#parting-looks-doubled">A Parting Looks Doubled Or Folded</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#partings-flat">Partings Look Flat, Or The Bump Sliders Have Gone</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#partings-magenta">Partings Turn Magenta In Material Preview</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#place-parting-does-nothing">Place Parting Does Nothing</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#bake-greyed-out">Bake Partings Is Greyed Out Or Refuses</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#no-normal-map">My Bake Has No Normal Map</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#face-in-normal-map">The Face Shows Through My Baked Normal Map</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#bake-holes">Partings Bake With Small Holes In Them</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#dark-speckles">Dark Speckles Or Short Dashes Inside My Partings After Baking</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#bake-slower">Baking Takes Much Longer Than It Used To</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#baked-colour-darker">The Baked Colour Is Darker Than My Hair Color Swatch</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#frozen-partings-missing">Partings I Froze Have Disappeared From My Maps</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#freeze-greyed-out">Freeze Layer Is Greyed Out</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#baked-maps-vanished">My Baked Maps Vanished</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#mirrored-mesh-doubled">Partings Are Doubled, Or Land In The Wrong Place, On A Mirrored Mesh</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#viewport-slow">The Viewport Is Slow</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#preview-still-on">Preview Mode Is Still On After I Finish Placing</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#dashed-lines">Dashed Lines Run From Every Parting To The Head</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#pale-edge">The Transparent Export Has A Pale Or Skin-Coloured Edge</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#sixteen-bit">16-bit Export Looks The Same And The File Is Much Bigger</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#save-transparent-unavailable">Save Transparent Is Unavailable</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#key-guide-gone">The Key Guide Has Disappeared From The Viewport</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#ctrl-z-crash">Ctrl+Z Crashed Blender After I Placed Partings</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#mirror-toggle-missing">I Cannot See The Mirror Toggle In The Sidebar</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#depth-slider-gone">The Depth Slider Has Gone</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#slider-limit">An Appearance Slider Will Not Go As High As It Used To</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#still-stuck">Still Stuck</a>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="glossary.html">Glossary</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="changelog.html">Changelog</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Parting Placer Guide</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../index.html" class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">Help</li>
+      <li class="breadcrumb-item active">Troubleshooting</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h2 id="troubleshooting">Troubleshooting<a class="headerlink" href="#troubleshooting" title="Permanent link">&para;</a></h2>
+<p><strong>Applies to:</strong> Parting Placer V2.0.0 · Blender 4.4 · 5.2</p>
+<p>Find your symptom below. Each entry gives the fix first, then the reason.</p>
+
+
+<h4 id="cannot-see-partings">I Cannot See Any Partings<a class="headerlink" href="#cannot-see-partings" title="Permanent link">&para;</a></h4>
+<p>Switch the viewport to <strong>Material Preview</strong> or <strong>Rendered</strong> shading. Press <strong>Z</strong> to pick one. Partings are shading, so they don't show in <strong>Solid</strong>.</p>
+<p>Already in Material Preview? Check these:</p>
+<ul>
+<li>The parting isn't hidden. Each one has an eye in the <a href="../reference/parting-list.html#row-eye">Parting List</a>.</li>
+<li>The panel is working on the right head. See <a href="../reference/target.html#target">Target</a>.</li>
+<li>The parting isn't on the far side of the head. Orbit round before you assume it failed.</li>
+<li>You switched styles with Preview on. See <a href="../reference/target.html#style">Style</a>.</li>
+</ul>
+
+
+<h4 id="parting-looks-doubled">A Parting Looks Doubled Or Folded<a class="headerlink" href="#parting-looks-doubled" title="Permanent link">&para;</a></h4>
+<p>Update to V1.3.1, run <a href="../reference/header.html#repair-partings">Repair Partings</a> once, then look at the parting again.</p>
+<p>A parting with strongly moved corners could show a faint second copy of itself, folded back over the first. Partings already in a file keep their old look until you run Repair once.</p>
+
+
+<h4 id="partings-flat">Partings Look Flat, Or The Bump Sliders Have Gone<a class="headerlink" href="#partings-flat" title="Permanent link">&para;</a></h4>
+<p>Turn on <strong>Live Bump</strong>. The switch is at the bottom of the <strong>Appearance</strong> box. See <a href="../reference/appearance.html#live-bump">Live Bump</a>.</p>
+<p>From V2.0.0 it starts off. Bump is the slowest part of the material for Blender to rebuild, so placing stays quick without it. <strong>Bump Strength</strong> and <strong>Bump Distance</strong> show again while it is on.</p>
+<p>The switch covers every partings material in the file, including parked styles and other heads.</p>
+
+
+<h4 id="partings-magenta">Partings Turn Magenta In Material Preview<a class="headerlink" href="#partings-magenta" title="Permanent link">&para;</a></h4>
+<p>Update to V2.0.0, run <a href="../reference/header.html#repair-partings">Repair Partings</a> once, then look again.</p>
+<p>On some graphics cards, a head carrying about 25 partings could turn them magenta. Every parting's warp now shares one image, so the count no longer runs into the limit. Repair moves partings already in a file over. Its message counts the <strong>warp tile node(s) added</strong>.</p>
+
+
+<h4 id="place-parting-does-nothing">Place Parting Does Nothing<a class="headerlink" href="#place-parting-does-nothing" title="Permanent link">&para;</a></h4>
+<p>Select your head mesh, or set it as <strong>Target</strong>. Make sure the head has a material.</p>
+<p>Then move the mouse over the head. The preview only follows the cursor while it is over the head.</p>
+<p>If the add-on can't start, the status bar says why. See <a href="../reference/placement-keys.html#place-parting">Place Parting</a> for each message.</p>
+
+
+<h4 id="bake-greyed-out">Bake Partings Is Greyed Out Or Refuses<a class="headerlink" href="#bake-greyed-out" title="Permanent link">&para;</a></h4>
+<p>Check these, in order:</p>
+<ol>
+<li><strong>Preview is on.</strong> Select <strong>Disable Preview</strong> first.</li>
+<li><strong>The head has no UV map.</strong> Unwrap the head first.</li>
+<li><strong>The head has no partings.</strong> Place at least one.</li>
+<li><strong>Only Normal is ticked and Live Bump is off.</strong> Turn on <strong>Live Bump</strong>, or tick another map too.</li>
+</ol>
+<p>Pending mirrors don't block <strong>Bake Partings</strong>. A dialog asks whether to include them. See <a href="../reference/bake.html#include-pending-mirrors">Include pending mirrors in bake</a>.</p>
+
+
+
+
+<h4 id="no-normal-map">My Bake Has No Normal Map<a class="headerlink" href="#no-normal-map" title="Permanent link">&para;</a></h4>
+<p>Turn on <strong>Live Bump</strong>, then bake again.</p>
+<p>With <strong>Live Bump</strong> off there is no bump to bake. The <strong>Normal</strong> tick box is greyed out, and the bake skips it. If <strong>Normal</strong> was the only map ticked, the bake stops with a warning.</p>
+<p><strong>Freeze Layer</strong> and <strong>Apply Bake</strong> warn you in their confirm box when the last bake had no Normal map. See <a href="../reference/bake.html#apply-bake">Apply Bake</a>.</p>
+
+
+<h4 id="face-in-normal-map">The Face Shows Through My Baked Normal Map<a class="headerlink" href="#face-in-normal-map" title="Permanent link">&para;</a></h4>
+<p>Update to V1.3.0 or later, run <a href="../reference/header.html#repair-partings">Repair Partings</a> once, then bake again.</p>
+<p>Older versions let the bump reach outside the partings. Eyes, nose, lips and ears showed up in the normal map. Until you run Repair, the file looks unchanged. That is expected.</p>
+
+
+<h4 id="bake-holes">Partings Bake With Small Holes In Them<a class="headerlink" href="#bake-holes" title="Permanent link">&para;</a></h4>
+<p>Raise <a href="../reference/bake.html#samples">Samples</a> in the <strong>Bake</strong> box.</p>
+<p>The default of 16 leaves around 0.4% of the parting area holed. Past 16 the gains fall off sharply while the bake gets slower.</p>
+
+
+<h4 id="dark-speckles">Dark Speckles Or Short Dashes Inside My Partings After Baking<a class="headerlink" href="#dark-speckles" title="Permanent link">&para;</a></h4>
+<p>Update to V1.1.0 or later, then bake again.</p>
+<p>The dashes only show in the baked maps and the transparent export, never in the viewport. Maps baked with an older version keep them until you re-bake.</p>
+
+
+<h4 id="bake-slower">Baking Takes Much Longer Than It Used To<a class="headerlink" href="#bake-slower" title="Permanent link">&para;</a></h4>
+<p>This is expected from V1.1.0. The old speed came at the cost of dropped pixels in every map.</p>
+<p>To work faster, bake at a lower <strong>Resolution</strong> while you work, and raise it for the final pass. Keep <strong>Normal Resolution</strong> high, since it carries the fine detail.</p>
+
+
+<h4 id="baked-colour-darker">The Baked Colour Is Darker Than My Hair Color Swatch<a class="headerlink" href="#baked-colour-darker" title="Permanent link">&para;</a></h4>
+<p>Lower <a href="../reference/appearance.html#detail">Detail</a>. At <strong>0</strong> the bake matches your swatch.</p>
+<p><strong>Detail</strong> darkens the parting, and the bake shows your colour after <strong>Detail</strong> is applied. The hue stays the same. Only the brightness changes.</p>
+
+
+<h4 id="frozen-partings-missing">Partings I Froze Have Disappeared From My Maps<a class="headerlink" href="#frozen-partings-missing" title="Permanent link">&para;</a></h4>
+<p>Update to V1.1.0 or later. From then on, frozen partings survive any number of later bakes.</p>
+<p>Before V1.1.0, freezing then baking more than once lost frozen partings from the Alpha map. The Color, Normal and Roughness maps were never affected. Alpha already lost can't be recovered. Re-place and re-bake those partings, or carry on and let your next freeze start fresh.</p>
+
+
+<h4 id="freeze-greyed-out">Freeze Layer Is Greyed Out<a class="headerlink" href="#freeze-greyed-out" title="Permanent link">&para;</a></h4>
+<p>Check these, in order:</p>
+<ol>
+<li><strong>You haven't baked yet.</strong> Select <strong>Bake Partings</strong> first. <strong>Freeze Layer</strong> reuses that bake.</li>
+<li><strong>Mirrors are pending.</strong> Confirm or deactivate them.</li>
+<li><strong>You've used all 3 freezes on this material.</strong> The limit can't be raised. Start a new style instead.</li>
+</ol>
+
+
+
+
+<h4 id="baked-maps-vanished">My Baked Maps Vanished<a class="headerlink" href="#baked-maps-vanished" title="Permanent link">&para;</a></h4>
+<p>The usual cause is <strong>File &gt; Clean Up &gt; Purge Unused Data</strong>. Bake again to get them back.</p>
+<p>Some maps are kept on the material without being plugged into anything. Blender thinks they are unused and deletes them. The Alpha map, the transparent-export pass and every frozen snapshot are in that group. A lost frozen snapshot can't be re-baked, because its partings are gone from your scene.</p>
+<p>Before you purge, open the <strong>Image Editor</strong> and switch on the shield icon (fake user) for those maps. Saving your file is safe, because the maps are packed into it.</p>
+
+
+<h4 id="mirrored-mesh-doubled">Partings Are Doubled, Or Land In The Wrong Place, On A Mirrored Mesh<a class="headerlink" href="#mirrored-mesh-doubled" title="Permanent link">&para;</a></h4>
+<p>If your head has a Mirror modifier, don't also mirror partings with the add-on. You would be mirroring twice.</p>
+<p>Place partings on the real half only, and turn the Mirror modifier off for renders. See <a href="../howto/mirror-modifier.html">Work On A Head With A Mirror Modifier</a>.</p>
+
+
+<h4 id="viewport-slow">The Viewport Is Slow<a class="headerlink" href="#viewport-slow" title="Permanent link">&para;</a></h4>
+<p>Select <strong>Enable Preview</strong>. Nothing is committed, and <strong>Disable Preview</strong> brings full shading back.</p>
+<p>Then close the <strong>Shader Editor</strong> if it is open. For partings that are settled, bake and use <strong>Freeze Layer</strong>. See <a href="../howto/viewport-speed.html">Keep The Viewport Fast</a>.</p>
+
+
+<h4 id="preview-still-on">Preview Mode Is Still On After I Finish Placing<a class="headerlink" href="#preview-still-on" title="Permanent link">&para;</a></h4>
+<p>This is on purpose. The partings you just placed stay live on top of the stand-in, so they are still quick to adjust. Select <strong>Disable Preview</strong> when you want full shading back.</p>
+<p>Preview Mode is saved with the file. A file saved with it on opens with it on.</p>
+
+
+<h4 id="dashed-lines">Dashed Lines Run From Every Parting To The Head<a class="headerlink" href="#dashed-lines" title="Permanent link">&para;</a></h4>
+<p>Select the <a href="../reference/header.html#relationship-lines">Relationship Lines</a> icon in the panel header. It hides the lines in that viewport and changes nothing in your file.</p>
+
+
+<h4 id="pale-edge">The Transparent Export Has A Pale Or Skin-Coloured Edge<a class="headerlink" href="#pale-edge" title="Permanent link">&para;</a></h4>
+<p>Bake once more with V1.1.0 or later, then export again.</p>
+<p>The export now takes its colour from a pass that leaves the skin out. A soft edge keeps the parting's own colour. A material last baked with an older version falls back to the old look. The status bar message after saving tells you which was used.</p>
+
+
+<h4 id="sixteen-bit">16-bit Export Looks The Same And The File Is Much Bigger<a class="headerlink" href="#sixteen-bit" title="Permanent link">&para;</a></h4>
+<p>Switch back to <strong>8-bit</strong> unless you see banding in the colour of a soft edge.</p>
+<p>16-bit helps the colour, not the transparency. Transparency is stored at 8-bit either way, in a file about three times the size. If the banding is in the edge's transparency, 16-bit won't help.</p>
+
+
+<h4 id="save-transparent-unavailable">Save Transparent Is Unavailable<a class="headerlink" href="#save-transparent-unavailable" title="Permanent link">&para;</a></h4>
+<p>Tick <strong>Alpha</strong> in the <strong>Bake</strong> box and bake again. <strong>Save Transparent</strong> needs both <strong>Color</strong> and <strong>Alpha</strong> baked, and <strong>Alpha</strong> is off by default.</p>
+
+
+<h4 id="key-guide-gone">The Key Guide Has Disappeared From The Viewport<a class="headerlink" href="#key-guide-gone" title="Permanent link">&para;</a></h4>
+<p>Look along the top of the viewport. If the guide can't be drawn, it shows there as a single line for the rest of the session.</p>
+<p>To get the full guide back, turn the add-on off and on again in <strong>Edit &gt; Preferences &gt; Add-ons</strong>. This doesn't touch your partings, styles or baked maps.</p>
+<p>If it keeps happening, email the console text to help@ebonix.com. On Windows, open it with <strong>Window &gt; Toggle System Console</strong>. On macOS and Linux, start Blender from a terminal.</p>
+
+
+<h4 id="ctrl-z-crash">Ctrl+Z Crashed Blender After I Placed Partings<a class="headerlink" href="#ctrl-z-crash" title="Permanent link">&para;</a></h4>
+<p>Update to V1.3.0 or later.</p>
+<p>Now, one <strong>Ctrl+Z</strong> after you finish undoes the whole session. <strong>Ctrl+Z</strong> while placing still removes one parting at a time.</p>
+
+
+<h4 id="mirror-toggle-missing">I Cannot See The Mirror Toggle In The Sidebar<a class="headerlink" href="#mirror-toggle-missing" title="Permanent link">&para;</a></h4>
+<p>It was removed in V1.2.0. Press <strong>M</strong> while placing to turn mirroring on and off. Partings you already mirrored are unaffected.</p>
+
+
+<h4 id="depth-slider-gone">The Depth Slider Has Gone<a class="headerlink" href="#depth-slider-gone" title="Permanent link">&para;</a></h4>
+<p>It was removed in V1.2.0 and is fixed at 0.5. Partings placed earlier keep the value they had.</p>
+
+
+<h4 id="slider-limit">An Appearance Slider Will Not Go As High As It Used To<a class="headerlink" href="#slider-limit" title="Permanent link">&para;</a></h4>
+<p>Each parting's sliders now stop at the same limits as the shared ones. <strong>Opacity</strong> stops at 100.</p>
+<p>If a parting was set past a limit, <a href="../reference/header.html#repair-partings">Repair Partings</a> brings it back to that limit. Check anything you pushed far on purpose before you run Repair.</p>
+
+
+<h4 id="still-stuck">Still Stuck<a class="headerlink" href="#still-stuck" title="Permanent link">&para;</a></h4>
+<p>Email help@ebonix.com with:</p>
+<ul>
+<li>your Blender version</li>
+<li>the add-on version, from <strong>Edit &gt; Preferences &gt; Add-ons</strong></li>
+<li>what you did, what you expected, and what happened</li>
+<li>a screenshot of the panel and of the problem</li>
+</ul>
+<p>If the problem is in a baked map or an export, attach the image itself.</p>
+
+
+<p><strong>Recommended next:</strong> <a href="glossary.html">Glossary</a></p>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../reference/orphan-stamps.html" class="btn btn-neutral float-left" title="Orphan Stamps Warning"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="glossary.html" class="btn btn-neutral float-right" title="Glossary">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    
+      <p>Parting Placer Tool · AVILABS by Ebonix</p>
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../reference/orphan-stamps.html" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="glossary.html" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "..";</script>
+    <script src="../js/theme_extra.js"></script>
+    <script src="../js/theme.js"></script>
+      <script src="../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

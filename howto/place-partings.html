@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>Place Partings - Parting Placer Guide</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+        <link href="../css/extra.css" rel="stylesheet" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Place Partings";
+        var mkdocs_page_input_path = "howto/place-partings.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../index.html" class="icon icon-home"> Parting Placer Guide
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../index.html">Welcome</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../requirements.html">Requirements And Compatibility</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../install.html">Install, Update, Uninstall</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Getting Started</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../quickstart.html">Your First Parting In 10 Minutes</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Main Concepts</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../concepts/how-a-parting-works.html">How A Parting Is Built</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../concepts/live-preview-frozen.html">Live, Preview And Frozen Partings</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../concepts/what-baking-produces.html">What Baking Produces</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../concepts/alpha.html">Straight Vs Premultiplied Alpha</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../concepts/styles.html">Styles</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">How-To</span></p>
+              <ul class="current">
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">Place Partings</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#steps">Steps</a>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="mirror-partings.html">Mirror Partings</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="several-at-once.html">Work On Several Partings At Once</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="match-appearance.html">Make Every Parting Match</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="viewport-speed.html">Keep The Viewport Fast</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="mirror-modifier.html">Work On A Head With A Mirror Modifier</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="bake-and-save.html">Bake And Save Textures</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="transparent-export.html">Export A Transparent Overlay</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="styles.html">Save And Switch Parting Styles</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="repair-reset.html">Repair Or Reset A Head</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Panel Reference</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../reference/header.html">Panel Header</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../reference/target.html">Target And Styles</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../reference/placement-keys.html">Place Parting And Placement Keys</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../reference/preview.html">Preview</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../reference/parting-list.html">Parting List</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../reference/appearance.html">Appearance</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../reference/parting-parameters.html">Parting Parameters</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../reference/bake.html">Bake</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../reference/save.html">Saving Textures</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../reference/orphan-stamps.html">Orphan Stamps Warning</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Help</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../help/troubleshooting.html">Troubleshooting</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../help/glossary.html">Glossary</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../help/changelog.html">Changelog</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Parting Placer Guide</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../index.html" class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">How-To</li>
+      <li class="breadcrumb-item active">Place Partings</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h2 id="place-partings">Place Partings<a class="headerlink" href="#place-partings" title="Permanent link">&para;</a></h2>
+<p><strong>Applies to:</strong> Parting Placer V2.0.0 · Blender 4.4 · 5.2</p>
+<p>Place one or more partings on a head, sized and turned the way you want.</p>
+<div class="admonition info">
+<p class="admonition-title">You Need First</p>
+<ul>
+<li>A head mesh with a material. See <a href="../requirements.html#what-you-need">Requirements</a>.</li>
+<li>The viewport in <strong>Material Preview</strong>. See <a href="../quickstart.html">Your First Parting In 10 Minutes</a>.</li>
+</ul>
+</div>
+<h4 id="steps">Steps<a class="headerlink" href="#steps" title="Permanent link">&para;</a></h4>
+<ol>
+<li>Select your head mesh.</li>
+<li>In the <strong>Parting Placer</strong> tab, select <strong>Place Parting</strong>.</li>
+<li>Move the mouse over the head. A preview parting follows the cursor.</li>
+<li>Press <strong>S</strong> to switch to size mode.</li>
+<li>Scroll to make the parting bigger or smaller.</li>
+<li>Press <strong>R</strong> to switch to rotating.</li>
+<li>Scroll to turn the parting.</li>
+<li>Press <strong>R</strong> again to give the scroll wheel back to the viewport.</li>
+<li>Left-click to place the parting.</li>
+<li>Move to the next spot and left-click again. Repeat for as many as you need.</li>
+<li>Right-click to finish.</li>
+</ol>
+<p>The size you end on carries over to your next session. Rotation starts at 0° each time.</p>
+<p>To stretch the parting in one direction, press <strong>X</strong> or <strong>Y</strong> after <strong>S</strong>. Every key is on <a href="../reference/placement-keys.html">Place Parting And Placement Keys</a>.</p>
+<div class="admonition note">
+<p class="admonition-title">Undo While Placing</p>
+<p><strong>Ctrl+Z</strong> while placing removes the last parting. After you finish, one <strong>Ctrl+Z</strong> takes back the whole session.</p>
+</div>
+
+
+<div class="admonition stuck">
+<p class="admonition-title">If You're Stuck</p>
+<ul>
+<li>Nothing follows the mouse? See <a href="../help/troubleshooting.html#place-parting-does-nothing">Place Parting Does Nothing</a>.</li>
+<li>Placed it and can't see it? See <a href="../help/troubleshooting.html#cannot-see-partings">I Cannot See Any Partings</a>.</li>
+</ul>
+</div>
+<p><strong>Recommended next:</strong> <a href="mirror-partings.html">Mirror Partings</a></p>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../concepts/styles.html" class="btn btn-neutral float-left" title="Styles"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="mirror-partings.html" class="btn btn-neutral float-right" title="Mirror Partings">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    
+      <p>Parting Placer Tool · AVILABS by Ebonix</p>
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../concepts/styles.html" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="mirror-partings.html" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "..";</script>
+    <script src="../js/theme_extra.js"></script>
+    <script src="../js/theme.js"></script>
+      <script src="../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

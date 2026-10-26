@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>Bake - Parting Placer Guide</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+        <link href="../css/extra.css" rel="stylesheet" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Bake";
+        var mkdocs_page_input_path = "reference/bake.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../index.html" class="icon icon-home"> Parting Placer Guide
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../index.html">Welcome</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../requirements.html">Requirements And Compatibility</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../install.html">Install, Update, Uninstall</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Getting Started</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../quickstart.html">Your First Parting In 10 Minutes</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Main Concepts</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../concepts/how-a-parting-works.html">How A Parting Is Built</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../concepts/live-preview-frozen.html">Live, Preview And Frozen Partings</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../concepts/what-baking-produces.html">What Baking Produces</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../concepts/alpha.html">Straight Vs Premultiplied Alpha</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../concepts/styles.html">Styles</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">How-To</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../howto/place-partings.html">Place Partings</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../howto/mirror-partings.html">Mirror Partings</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../howto/several-at-once.html">Work On Several Partings At Once</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../howto/match-appearance.html">Make Every Parting Match</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../howto/viewport-speed.html">Keep The Viewport Fast</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../howto/mirror-modifier.html">Work On A Head With A Mirror Modifier</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../howto/bake-and-save.html">Bake And Save Textures</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../howto/transparent-export.html">Export A Transparent Overlay</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../howto/styles.html">Save And Switch Parting Styles</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../howto/repair-reset.html">Repair Or Reset A Head</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Panel Reference</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="header.html">Panel Header</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="target.html">Target And Styles</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="placement-keys.html">Place Parting And Placement Keys</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="preview.html">Preview</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="parting-list.html">Parting List</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="appearance.html">Appearance</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="parting-parameters.html">Parting Parameters</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">Bake</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#mirror-modifier-warning">Mirror Modifier Warning</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#resolution">Resolution</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#normal-resolution">Normal Resolution</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#normal-filtering">Normal Filtering</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#margin-type">Margin Type</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#samples">Samples</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#margin">Margin</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#bake-channels">Color / Normal / Roughness / Alpha</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#bake-partings">Bake Partings</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#include-pending-mirrors">Include pending mirrors in bake</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#apply-bake">Apply Bake</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#freeze-layer">Freeze Layer</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#no-uv-warning">Mesh has no UV map</a>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="save.html">Saving Textures</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="orphan-stamps.html">Orphan Stamps Warning</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Help</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../help/troubleshooting.html">Troubleshooting</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../help/glossary.html">Glossary</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../help/changelog.html">Changelog</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Parting Placer Guide</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../index.html" class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">Panel Reference</li>
+      <li class="breadcrumb-item active">Bake</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h2 id="bake">Bake<a class="headerlink" href="#bake" title="Permanent link">&para;</a></h2>
+<p><strong>Applies to:</strong> Parting Placer V2.0.0 · Blender 4.4 · 5.2</p>
+
+
+<p><strong>Bake Partings</strong> renders your partings into image maps you can save and use elsewhere. Your partings stay live afterwards, so you can keep tweaking and bake again.</p>
+<p>The box starts collapsed. Select the arrow beside <strong>Bake</strong> to open it.</p>
+
+
+<figure class="spp-media spp-figure"><img src="../img/spp-bake-01-box-v200.png" alt="Bake box showing Resolution, Normal Resolution, Normal Filtering, Margin Type, Samples, Margin, four channel tick boxes, and the Bake Partings, Apply Bake and Freeze Layer buttons" loading="lazy"><figcaption>[1] The Bake box, open, before a bake, with Live Bump on</figcaption></figure>
+
+
+
+
+
+<p>The settings are greyed out until the head has a parting and a UV map.</p>
+<h4 id="mirror-modifier-warning">Mirror Modifier Warning<a class="headerlink" href="#mirror-modifier-warning" title="Permanent link">&para;</a></h4>
+<p>This red warning appears at the top if the head has a Mirror modifier switched on for rendering. It reads: <strong>Mirror modifier — partings on the mirrored half share UVs and will be lost in the bake</strong>.</p>
+<p>See <a href="../howto/mirror-modifier.html">Work On A Head With A Mirror Modifier</a> for what to do.</p>
+
+
+<h4 id="resolution">Resolution<a class="headerlink" href="#resolution" title="Permanent link">&para;</a></h4>
+<p>The size of the Color, Roughness and Alpha maps, in pixels: <strong>512</strong>, <strong>1024</strong>, <strong>2048</strong> or <strong>4096</strong>. The default is <strong>2048</strong>.</p>
+
+
+
+
+<h4 id="normal-resolution">Normal Resolution<a class="headerlink" href="#normal-resolution" title="Permanent link">&para;</a></h4>
+<p>The size of the Normal map, set apart from the others. The Normal map carries the fine bump detail, so it benefits from more pixels. Options run from <strong>512</strong> to <strong>8192</strong>. The default is <strong>4096</strong>.</p>
+
+
+
+
+<h4 id="normal-filtering">Normal Filtering<a class="headerlink" href="#normal-filtering" title="Permanent link">&para;</a></h4>
+<p>Shown while <strong>Normal</strong> is ticked. <strong>Linear</strong> or <strong>Cubic</strong>, applied to the normal pass only. Leave it on <strong>Linear</strong>. The README says Cubic makes the blockiness slightly worse.</p>
+
+
+<h4 id="margin-type">Margin Type<a class="headerlink" href="#margin-type" title="Permanent link">&para;</a></h4>
+<p>How the margin is filled. <strong>Extend</strong> repeats the border pixels, which is what the tool has always done. <strong>Adjacent Faces</strong> samples across UV seams instead. The default is <strong>Extend</strong>.</p>
+
+
+<h4 id="samples">Samples<a class="headerlink" href="#samples" title="Permanent link">&para;</a></h4>
+<p>How finely the bake is sampled. The default is <strong>16</strong>. Raise it if your partings bake with small holes. Past 16 the gains fall off sharply while the bake keeps getting slower.</p>
+<p>The README calls it <strong>Bake Samples</strong>.</p>
+
+
+<h4 id="margin">Margin<a class="headerlink" href="#margin" title="Permanent link">&para;</a></h4>
+<p>How far the bake spreads past the edge of each UV island, in pixels, so seams don't show. The default is <strong>32</strong>, from 0 to 64.</p>
+<p>It also spreads the bump outside each parting by the same amount. Lower it to narrow that spread.</p>
+
+
+<h4 id="bake-channels">Color / Normal / Roughness / Alpha<a class="headerlink" href="#bake-channels" title="Permanent link">&para;</a></h4>
+<p>Tick the maps you want. <strong>Color</strong>, <strong>Normal</strong> and <strong>Roughness</strong> are on by default. <strong>Alpha</strong> is off.</p>
+<p><strong>Alpha</strong> makes a coverage map: where your partings are, not what colour they are. You only need it for <strong>Save Transparent</strong>. With <strong>Color</strong> and <strong>Alpha</strong> both ticked, the bake takes two extra passes rather than one.</p>
+<p><strong>Normal</strong> only bakes while <a href="appearance.html#live-bump">Live Bump</a> is on. Live Bump starts off, so a first bake skips <strong>Normal</strong> unless you turn it on.</p>
+<p>While Live Bump is off, the <strong>Normal</strong> tick box is greyed out and the bake skips it. If <strong>Normal</strong> is the only map ticked, the bake stops with <strong>Normal skipped: Live Bump is off. Turn it on to bake a Normal map.</strong></p>
+
+
+
+
+
+
+
+
+<h4 id="bake-partings">Bake Partings<a class="headerlink" href="#bake-partings" title="Permanent link">&para;</a></h4>
+<p>Renders the ticked maps. Baking again is safe: the new maps carry the old ones forward, even if you change the resolution.</p>
+<p>It is greyed out while Preview is on. Select <strong>Disable Preview</strong> first. See <a href="preview.html#preview-toggle">Preview</a>.</p>
+<p>Once a bake exists, the save options appear underneath. See <a href="save.html">Saving Textures</a>.</p>
+
+
+
+
+<h4 id="include-pending-mirrors">Include pending mirrors in bake<a class="headerlink" href="#include-pending-mirrors" title="Permanent link">&para;</a></h4>
+<p>Select <strong>Bake Partings</strong> with mirrors still pending, and a dialog says how many. It offers this tick box. It is on by default, so pending mirrors bake along with your other partings.</p>
+<p>Untick it to bake only the partings you have kept.</p>
+
+
+
+
+
+
+<h4 id="apply-bake">Apply Bake<a class="headerlink" href="#apply-bake" title="Permanent link">&para;</a></h4>
+<p>Swaps the live partings for the baked images and deletes their Empties. This is the step that makes the hair ready for export. Press <strong>Ctrl+Z</strong> to undo it.</p>
+<p>It is greyed out until you have baked, and while any mirrors are pending.</p>
+<p>Blender asks you to confirm first. The status bar then says how many maps it applied and how many Empties it removed.</p>
+<p>If your last bake had no Normal map, the confirm box warns you first. It reads <strong>Last bake had no Normal map: parting relief will be lost.</strong> An older Normal map may still be there. Then it reads <strong>Last bake skipped Normal: an older Normal map will be used.</strong></p>
+
+
+
+
+
+
+
+
+
+
+<h4 id="freeze-layer">Freeze Layer<a class="headerlink" href="#freeze-layer" title="Permanent link">&para;</a></h4>
+<p>Takes your last bake as a checkpoint and clears the partings so far, so you can keep placing on top. Frozen work stays in your maps however many times you bake afterwards. Use it when a set of partings is settled.</p>
+<p>Select <strong>Bake Partings</strong> first. <strong>Freeze Layer</strong> reuses that bake and does not bake on its own.</p>
+<p>You can freeze 3 times per material. When you place more partings after a freeze, the button counts your freezes, for example <strong>Freeze Layer (1/3)</strong>. It is greyed out while any mirrors are pending.</p>
+<p>After a freeze, the frozen partings show on the head as part of the baked image. Their Empties are gone. The list starts empty again.</p>
+<p>Its confirm box carries the same Normal map warning as <a href="#apply-bake">Apply Bake</a>.</p>
+
+
+
+
+
+
+
+
+
+
+<h4 id="no-uv-warning">Mesh has no UV map<a class="headerlink" href="#no-uv-warning" title="Permanent link">&para;</a></h4>
+<p>Shown at the bottom of the box when the head has no UV map. Baking needs one. Add a UV map to the head, then come back.</p>
+
+
+<div class="admonition stuck">
+<p class="admonition-title">If You're Stuck</p>
+<ul>
+<li><strong>Bake Partings</strong> is greyed out? See <a href="../help/troubleshooting.html#bake-greyed-out">Bake Partings Is Greyed Out Or Refuses</a>.</li>
+<li>Small holes or dark speckles in the maps? See <a href="../help/troubleshooting.html#bake-holes">Partings Bake With Small Holes In Them</a>.</li>
+<li><strong>Freeze Layer</strong> is greyed out? See <a href="../help/troubleshooting.html#freeze-greyed-out">Freeze Layer Is Greyed Out</a>.</li>
+</ul>
+</div>
+<p><strong>Recommended next:</strong> <a href="save.html">Saving Textures</a></p>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="parting-parameters.html" class="btn btn-neutral float-left" title="Parting Parameters"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="save.html" class="btn btn-neutral float-right" title="Saving Textures">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    
+      <p>Parting Placer Tool · AVILABS by Ebonix</p>
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="parting-parameters.html" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="save.html" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "..";</script>
+    <script src="../js/theme_extra.js"></script>
+    <script src="../js/theme.js"></script>
+      <script src="../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

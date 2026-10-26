@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>Saving Textures - Parting Placer Guide</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+        <link href="../css/extra.css" rel="stylesheet" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Saving Textures";
+        var mkdocs_page_input_path = "reference/save.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../index.html" class="icon icon-home"> Parting Placer Guide
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../index.html">Welcome</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../requirements.html">Requirements And Compatibility</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../install.html">Install, Update, Uninstall</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Getting Started</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../quickstart.html">Your First Parting In 10 Minutes</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Main Concepts</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../concepts/how-a-parting-works.html">How A Parting Is Built</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../concepts/live-preview-frozen.html">Live, Preview And Frozen Partings</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../concepts/what-baking-produces.html">What Baking Produces</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../concepts/alpha.html">Straight Vs Premultiplied Alpha</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../concepts/styles.html">Styles</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">How-To</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../howto/place-partings.html">Place Partings</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../howto/mirror-partings.html">Mirror Partings</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../howto/several-at-once.html">Work On Several Partings At Once</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../howto/match-appearance.html">Make Every Parting Match</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../howto/viewport-speed.html">Keep The Viewport Fast</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../howto/mirror-modifier.html">Work On A Head With A Mirror Modifier</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../howto/bake-and-save.html">Bake And Save Textures</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../howto/transparent-export.html">Export A Transparent Overlay</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../howto/styles.html">Save And Switch Parting Styles</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../howto/repair-reset.html">Repair Or Reset A Head</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Panel Reference</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="header.html">Panel Header</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="target.html">Target And Styles</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="placement-keys.html">Place Parting And Placement Keys</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="preview.html">Preview</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="parting-list.html">Parting List</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="appearance.html">Appearance</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="parting-parameters.html">Parting Parameters</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="bake.html">Bake</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">Saving Textures</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#baked-line">Baked: Line</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#bit-depth">Bit Depth</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#premultiplied">Premultiplied</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#save-textures">Save Textures</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#save-transparent">Save Transparent</a>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="orphan-stamps.html">Orphan Stamps Warning</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Help</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../help/troubleshooting.html">Troubleshooting</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../help/glossary.html">Glossary</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../help/changelog.html">Changelog</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Parting Placer Guide</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../index.html" class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">Panel Reference</li>
+      <li class="breadcrumb-item active">Saving Textures</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h2 id="saving-textures">Saving Textures<a class="headerlink" href="#saving-textures" title="Permanent link">&para;</a></h2>
+<p><strong>Applies to:</strong> Parting Placer V2.0.0 · Blender 4.4 · 5.2</p>
+
+
+<p>Once you have baked, this row appears at the bottom of the <strong>Bake</strong> box. It writes your maps out of Blender as PNG files.</p>
+
+
+<figure class="spp-media spp-figure"><img src="../img/spp-save-01-row-v200.png" alt="Save row showing the Baked line, the bit depth dropdown, the Premultiplied toggle, and the Save Textures and Save Transparent buttons" loading="lazy"><figcaption>[1] The save row after a bake with Alpha ticked</figcaption></figure>
+
+
+
+
+
+<h4 id="baked-line">Baked: Line<a class="headerlink" href="#baked-line" title="Permanent link">&para;</a></h4>
+<p>Lists the maps you have baked, for example <strong>Baked: Color, Normal, Roughness</strong>.</p>
+
+
+
+
+<h4 id="bit-depth">Bit Depth<a class="headerlink" href="#bit-depth" title="Permanent link">&para;</a></h4>
+<p>The unlabelled dropdown: <strong>8-bit</strong> or <strong>16-bit</strong>. It applies to <strong>Save Transparent</strong>. The default is <strong>8-bit</strong>, which is right for almost everything.</p>
+<p><strong>16-bit</strong> gives the colour more levels to work with, but not the transparency. A 16-bit file has the same 256 steps of transparency as an 8-bit one. It is also about three times the size. Use it only when you see banding in the colour of a soft edge.</p>
+
+
+<h4 id="premultiplied">Premultiplied<a class="headerlink" href="#premultiplied" title="Permanent link">&para;</a></h4>
+<p>Multiplies the colour by the transparency before writing <strong>Save Transparent</strong>'s file. It is off by default. Leave it off unless your game engine asks for premultiplied alpha.</p>
+<p>Off keeps colour in the fully transparent areas, so nothing bleeds through when the engine shrinks the texture. The README calls it <strong>Premultiplied Alpha</strong>.</p>
+
+
+<h4 id="save-textures">Save Textures<a class="headerlink" href="#save-textures" title="Permanent link">&para;</a></h4>
+<p>Pick a folder, and every baked map is saved there as its own PNG. The file names include the head, the style, the map and its size. For example: <strong>head_Style 1_Partings_Color_1024.png</strong>.</p>
+<p>The status bar confirms how many it saved.</p>
+
+
+
+
+<h4 id="save-transparent">Save Transparent<a class="headerlink" href="#save-transparent" title="Permanent link">&para;</a></h4>
+<p>Writes one PNG with your parting colour and its transparency together. It is ready to layer over a scalp texture in a game engine. It uses this head's UV layout, so the file only fits this head.</p>
+<p>It needs both <strong>Color</strong> and <strong>Alpha</strong> baked. Until then it is greyed out and the row says "Tick Alpha and re-bake for transparent". The README calls it <strong>Save Textures (Transparent)</strong>.</p>
+<p>The status bar message says where the colour came from. If it says <strong>re-bake to use the premultiplied map</strong>, your last bake came from an older version. Bake once more, then save again.</p>
+<p>The file is named after the head, for example <strong>head_Partings_Transparent.png</strong>. The status bar confirms the bit depth and alpha type it used.</p>
+
+
+
+
+
+
+<div class="admonition stuck">
+<p class="admonition-title">If You're Stuck</p>
+<ul>
+<li><strong>Save Transparent</strong> is greyed out? See <a href="../help/troubleshooting.html#save-transparent-unavailable">Save Transparent Is Unavailable</a>.</li>
+<li>The transparent file has a pale edge? See <a href="../help/troubleshooting.html#pale-edge">The Transparent Export Has A Pale Or Skin-Coloured Edge</a>.</li>
+<li>16-bit looks the same? See <a href="../help/troubleshooting.html#sixteen-bit">16-bit Export Looks The Same And The File Is Much Bigger</a>.</li>
+</ul>
+</div>
+<p><strong>Recommended next:</strong> <a href="orphan-stamps.html">Orphan Stamps Warning</a></p>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="bake.html" class="btn btn-neutral float-left" title="Bake"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="orphan-stamps.html" class="btn btn-neutral float-right" title="Orphan Stamps Warning">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    
+      <p>Parting Placer Tool · AVILABS by Ebonix</p>
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="bake.html" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="orphan-stamps.html" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "..";</script>
+    <script src="../js/theme_extra.js"></script>
+    <script src="../js/theme.js"></script>
+      <script src="../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

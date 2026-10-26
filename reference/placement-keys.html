@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>Place Parting And Placement Keys - Parting Placer Guide</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+        <link href="../css/extra.css" rel="stylesheet" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Place Parting And Placement Keys";
+        var mkdocs_page_input_path = "reference/placement-keys.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../index.html" class="icon icon-home"> Parting Placer Guide
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../index.html">Welcome</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../requirements.html">Requirements And Compatibility</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../install.html">Install, Update, Uninstall</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Getting Started</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../quickstart.html">Your First Parting In 10 Minutes</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Main Concepts</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../concepts/how-a-parting-works.html">How A Parting Is Built</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../concepts/live-preview-frozen.html">Live, Preview And Frozen Partings</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../concepts/what-baking-produces.html">What Baking Produces</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../concepts/alpha.html">Straight Vs Premultiplied Alpha</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../concepts/styles.html">Styles</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">How-To</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../howto/place-partings.html">Place Partings</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../howto/mirror-partings.html">Mirror Partings</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../howto/several-at-once.html">Work On Several Partings At Once</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../howto/match-appearance.html">Make Every Parting Match</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../howto/viewport-speed.html">Keep The Viewport Fast</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../howto/mirror-modifier.html">Work On A Head With A Mirror Modifier</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../howto/bake-and-save.html">Bake And Save Textures</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../howto/transparent-export.html">Export A Transparent Overlay</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../howto/styles.html">Save And Switch Parting Styles</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../howto/repair-reset.html">Repair Or Reset A Head</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Panel Reference</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="header.html">Panel Header</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="target.html">Target And Styles</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">Place Parting And Placement Keys</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#place-parting">Place Parting</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#add-menu">Add &gt; Mesh Menu Entries</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#key-guide">Key Guide</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#key-mouse-move">Mouse Move</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#key-s">S</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#key-x-y">X / Y</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#key-r">R + Scroll</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#key-ctrl-scroll">Ctrl + Scroll</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#key-m">M</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#key-left-click">Left Click</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#key-ctrl-z">Ctrl+Z</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#key-finish">Right Click / Esc</a>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="preview.html">Preview</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="parting-list.html">Parting List</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="appearance.html">Appearance</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="parting-parameters.html">Parting Parameters</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="bake.html">Bake</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="save.html">Saving Textures</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="orphan-stamps.html">Orphan Stamps Warning</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Help</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../help/troubleshooting.html">Troubleshooting</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../help/glossary.html">Glossary</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../help/changelog.html">Changelog</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Parting Placer Guide</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../index.html" class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">Panel Reference</li>
+      <li class="breadcrumb-item active">Place Parting And Placement Keys</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h2 id="place-parting-and-placement-keys">Place Parting And Placement Keys<a class="headerlink" href="#place-parting-and-placement-keys" title="Permanent link">&para;</a></h2>
+<p><strong>Applies to:</strong> Parting Placer V2.0.0 · Blender 4.4 · 5.2</p>
+
+
+<p><strong>Place Parting</strong> puts you into placing mode on the head. This page covers the button and every key you can use until you finish.</p>
+
+
+<figure class="spp-media spp-figure"><img src="../img/spp-placement-keys-01-key-guide-v200.png" alt="Viewport key guide titled PLACING PARTINGS listing Stamp, Size, Axis Lock, Rotate, Mirror, Undo and Done with their current readouts" loading="lazy"><figcaption>[1] The key guide while placing, with size mode on</figcaption></figure>
+
+
+
+<h4 id="place-parting">Place Parting<a class="headerlink" href="#place-parting" title="Permanent link">&para;</a></h4>
+<p>Select <strong>Place Parting</strong> in the panel, then move the mouse over the head. A preview parting follows the cursor while it is over the head.</p>
+<p>The first parting on a head starts at a size worked out from the head's own size. After that, each session starts at the size of your last parting. Rotation goes back to 0°, and mirror starts off.</p>
+<p>A new parting faces straight out from the surface wherever you place it, whatever its proportions. Move it later with <strong>G</strong> and it keeps facing the surface as you drag. Any twist you added with <strong>R</strong> stays.</p>
+<p>Partings placed with an earlier version are left as they were.</p>
+
+
+
+
+<p>If the head already has partings and <strong>Auto Preview</strong> is ticked, Preview switches on as you start. See <a href="preview.html#auto-preview">Auto Preview</a>.</p>
+<p>If <strong>Place Parting</strong> refuses to start, the status bar says why:</p>
+<table>
+<thead>
+<tr>
+<th>Message</th>
+<th>What to do</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Run this from a 3D Viewport.</td>
+<td>Start it from the 3D viewport's sidebar.</td>
+</tr>
+<tr>
+<td>No target mesh. Pick one in the Partings panel or select a mesh object.</td>
+<td>Set <strong>Target</strong>, or select the head. See <a href="target.html#target">Target</a>.</td>
+</tr>
+<tr>
+<td>Head has no material to stamp into.</td>
+<td>Give the head a material first.</td>
+</tr>
+<tr>
+<td>Material slot is empty.</td>
+<td>Put a material in the head's empty material slot.</td>
+</tr>
+</tbody>
+</table>
+
+
+
+
+<h4 id="add-menu">Add &gt; Mesh Menu Entries<a class="headerlink" href="#add-menu" title="Permanent link">&para;</a></h4>
+<p>The 3D viewport's <strong>Add &gt; Mesh</strong> menu has three entries at the bottom: <strong>Place Partings</strong>, <strong>Repair Partings</strong> and <strong>Reset Partings</strong>.</p>
+<p><strong>Place Partings</strong> does the same as <strong>Place Parting</strong>. The other two match the <a href="header.html#repair-partings">Repair Partings</a> and <a href="header.html#reset-partings">Reset Partings</a> icons in the panel header.</p>
+
+
+
+
+<h4 id="key-guide">Key Guide<a class="headerlink" href="#key-guide" title="Permanent link">&para;</a></h4>
+<p>While you place, a key guide sits in the viewport. Its title is <strong>PLACING PARTINGS</strong>, with <strong>Stamps</strong> under it counting the partings placed this session.</p>
+<p>Each row shows a key, what it does, and its current state:</p>
+<table>
+<thead>
+<tr>
+<th>Row</th>
+<th>Shows</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>LMB</strong> Stamp</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>S</strong> Size</td>
+<td>Two numbers, one per side of the parting. <strong>[SIZE]</strong> appears while size mode is on.</td>
+</tr>
+<tr>
+<td><strong>X / Y</strong> Axis Lock</td>
+<td><strong>[X]</strong>, <strong>[Y]</strong> or <strong>[R]</strong> for what the scroll wheel is locked to, or <strong>[-]</strong> for nothing</td>
+</tr>
+<tr>
+<td><strong>R + Scroll</strong> Rotate</td>
+<td>The angle in degrees</td>
+</tr>
+<tr>
+<td><strong>M</strong> Mirror</td>
+<td><strong>[ON]</strong> or <strong>[OFF]</strong></td>
+</tr>
+<tr>
+<td><strong>Ctrl + Z</strong> Undo</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>RMB / Esc</strong> Done</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>The guide goes away when you finish. It only shows in the viewport you started placing from.</p>
+
+
+
+
+
+
+
+
+<h4 id="key-mouse-move">Mouse Move<a class="headerlink" href="#key-mouse-move" title="Permanent link">&para;</a></h4>
+<p>The preview parting follows the cursor while it is over the head. Over empty space, nothing appears.</p>
+
+
+<h4 id="key-s">S<a class="headerlink" href="#key-s" title="Permanent link">&para;</a></h4>
+<p>Press <strong>S</strong> to switch to size mode. The key guide shows <strong>[SIZE]</strong>, and each scroll notch makes the parting a little bigger or smaller on both sides.</p>
+<p>Press <strong>S</strong> again to leave size mode. Scrolling then zooms the viewport as usual.</p>
+<p>The size you end on carries to every parting you place afterwards, including in later sessions.</p>
+
+
+
+
+<h4 id="key-x-y">X / Y<a class="headerlink" href="#key-x-y" title="Permanent link">&para;</a></h4>
+<p>Press <strong>X</strong> or <strong>Y</strong> to lock resizing to one side of the parting. <strong>X</strong> changes the first size number and <strong>Y</strong> the second. Size mode stays on.</p>
+<p>Press the same key again to release the lock.</p>
+
+
+
+
+<h4 id="key-r">R + Scroll<a class="headerlink" href="#key-r" title="Permanent link">&para;</a></h4>
+<p>Press <strong>R</strong>, then scroll to rotate the parting by 5° per notch. Pressing <strong>R</strong> turns size mode off.</p>
+<p>Press <strong>R</strong> again to release it. Scrolling then zooms the viewport again.</p>
+
+
+
+
+<h4 id="key-ctrl-scroll">Ctrl + Scroll<a class="headerlink" href="#key-ctrl-scroll" title="Permanent link">&para;</a></h4>
+<p>Hold <strong>Ctrl</strong> and scroll to resize both sides without pressing <strong>S</strong> first. This shortcut is not listed in the key guide.</p>
+
+
+
+
+<h4 id="key-m">M<a class="headerlink" href="#key-m" title="Permanent link">&para;</a></h4>
+<p>Press <strong>M</strong> to turn mirroring on. The key guide shows <strong>[ON]</strong> and a mirrored preview appears on the other side. Press <strong>M</strong> again to turn it off.</p>
+<p>Every session starts with mirroring off. For what happens to a mirror after you place it, see <a href="../howto/mirror-partings.html">Mirror Partings</a>.</p>
+
+
+
+
+<h4 id="key-left-click">Left Click<a class="headerlink" href="#key-left-click" title="Permanent link">&para;</a></h4>
+<p>Click to place the parting where the preview sits. Placing mode stays on, so you can keep clicking to add more.</p>
+
+
+
+
+<h4 id="key-ctrl-z">Ctrl+Z<a class="headerlink" href="#key-ctrl-z" title="Permanent link">&para;</a></h4>
+<p>While you place, <strong>Ctrl+Z</strong> removes the last parting. Press it again to remove the one before.</p>
+<p>After you finish, one <strong>Ctrl+Z</strong> takes back the whole session.</p>
+
+
+
+
+<h4 id="key-finish">Right Click / Esc<a class="headerlink" href="#key-finish" title="Permanent link">&para;</a></h4>
+<p>Right-click or press <strong>Esc</strong> to finish. The status bar reports how many partings you placed in that session. For example: <strong>Finished — 2 parting decal(s) on 'Material.001_Partings'.</strong></p>
+<p>If Preview came on as you started, the message adds that <strong>Preview Mode</strong> is still on. See <a href="../help/troubleshooting.html#preview-still-on">Preview Mode Is Still On After I Finish Placing</a>.</p>
+
+
+
+
+<div class="admonition stuck">
+<p class="admonition-title">If You're Stuck</p>
+<ul>
+<li>Nothing follows the mouse? See <a href="../help/troubleshooting.html#place-parting-does-nothing">Place Parting Does Nothing</a>.</li>
+<li>The key guide is missing? See <a href="../help/troubleshooting.html#key-guide-gone">The Key Guide Has Disappeared From The Viewport</a>.</li>
+<li>Placed a parting and can't see it? See <a href="../help/troubleshooting.html#cannot-see-partings">I Cannot See Any Partings</a>.</li>
+</ul>
+</div>
+<p><strong>Recommended next:</strong> <a href="preview.html">Preview</a></p>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="target.html" class="btn btn-neutral float-left" title="Target And Styles"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="preview.html" class="btn btn-neutral float-right" title="Preview">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    
+      <p>Parting Placer Tool · AVILABS by Ebonix</p>
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="target.html" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="preview.html" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "..";</script>
+    <script src="../js/theme_extra.js"></script>
+    <script src="../js/theme.js"></script>
+      <script src="../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

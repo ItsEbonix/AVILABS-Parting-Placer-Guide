@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>Target And Styles - Parting Placer Guide</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+        <link href="../css/extra.css" rel="stylesheet" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Target And Styles";
+        var mkdocs_page_input_path = "reference/target.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../index.html" class="icon icon-home"> Parting Placer Guide
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../index.html">Welcome</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../requirements.html">Requirements And Compatibility</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../install.html">Install, Update, Uninstall</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Getting Started</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../quickstart.html">Your First Parting In 10 Minutes</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Main Concepts</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../concepts/how-a-parting-works.html">How A Parting Is Built</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../concepts/live-preview-frozen.html">Live, Preview And Frozen Partings</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../concepts/what-baking-produces.html">What Baking Produces</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../concepts/alpha.html">Straight Vs Premultiplied Alpha</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../concepts/styles.html">Styles</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">How-To</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../howto/place-partings.html">Place Partings</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../howto/mirror-partings.html">Mirror Partings</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../howto/several-at-once.html">Work On Several Partings At Once</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../howto/match-appearance.html">Make Every Parting Match</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../howto/viewport-speed.html">Keep The Viewport Fast</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../howto/mirror-modifier.html">Work On A Head With A Mirror Modifier</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../howto/bake-and-save.html">Bake And Save Textures</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../howto/transparent-export.html">Export A Transparent Overlay</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../howto/styles.html">Save And Switch Parting Styles</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../howto/repair-reset.html">Repair Or Reset A Head</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Panel Reference</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="header.html">Panel Header</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">Target And Styles</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#target">Target</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#material-line">Material And Slot Line</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#style">Style</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#rename-style">Pencil (Rename Style)</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#delete-style">Trash (Delete Style)</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#new-style">New Style…</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#parting-mask">Parting Mask</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#mask-arrows">Arrows</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#add-mask">Plus (Add Parting Mask)</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#remove-mask">Trash (Remove From Masks)</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#replace-mask">Replace</a>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="placement-keys.html">Place Parting And Placement Keys</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="preview.html">Preview</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="parting-list.html">Parting List</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="appearance.html">Appearance</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="parting-parameters.html">Parting Parameters</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="bake.html">Bake</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="save.html">Saving Textures</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="orphan-stamps.html">Orphan Stamps Warning</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Help</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../help/troubleshooting.html">Troubleshooting</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../help/glossary.html">Glossary</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../help/changelog.html">Changelog</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Parting Placer Guide</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../index.html" class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">Panel Reference</li>
+      <li class="breadcrumb-item active">Target And Styles</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h2 id="target-and-styles">Target And Styles<a class="headerlink" href="#target-and-styles" title="Permanent link">&para;</a></h2>
+<p><strong>Applies to:</strong> Parting Placer V2.0.0 · Blender 4.4 · 5.2</p>
+
+
+<p>This page covers the top of the panel. <strong>Target</strong> picks the head you are working on. Under it, the <strong>Style</strong> box holds that head's styles, and the <strong>Parting Mask</strong> box sets the image new partings use.</p>
+<p>The large <strong>Place Parting</strong> button sits below them. See <a href="placement-keys.html#place-parting">Place Parting</a>.</p>
+
+
+<figure class="spp-media spp-figure"><img src="../img/spp-target-01-box-v200.png" alt="Target box showing Active: head and the material and slot line; the Style box with Style 1, a pencil, a greyed trash icon and New Style; the Parting Mask box with arrows, plus, trash, the mask thumbnail and Replace; then Place Parting" loading="lazy"><figcaption>[1] The top of the panel with one style and one parting placed</figcaption></figure>
+
+
+
+<h4 id="target">Target<a class="headerlink" href="#target" title="Permanent link">&para;</a></h4>
+<p>Pick your head mesh here. Only mesh objects can be picked.</p>
+<p>Its tooltip reads: <strong>Mesh to stamp partings onto. Leave empty to use the active object.</strong></p>
+<p>You can leave it empty. The panel then works on the mesh you have selected and shows <strong>Active:</strong> followed by its name.</p>
+<p>With <strong>Target</strong> empty and no mesh selected, the panel shows "Pick a mesh, or select one". Everything below it is hidden, including <strong>Place Parting</strong>.</p>
+
+
+
+
+<h4 id="material-line">Material And Slot Line<a class="headerlink" href="#material-line" title="Permanent link">&para;</a></h4>
+<p>Once the head has a parting, a line appears under <strong>Target</strong>. It names the partings material and the material slot it sits in. For example: <strong>Material.001_Partings · slot 0</strong>.</p>
+<p>It is information only.</p>
+
+
+
+
+<h4 id="style">Style<a class="headerlink" href="#style" title="Permanent link">&para;</a></h4>
+<p>The styles sit in their own <strong>Style</strong> box under <strong>Target</strong>, once the head has a style.</p>
+<p>A style is a complete set of partings on one head. Each style gets its own row, listed in alphabetical order. The style showing on the head has a filled dot and a highlighted row.</p>
+<p>The first style on a head is called <strong>Style 1</strong>.</p>
+<p>Select another style's row to load it. The style that was showing is parked: its partings come off the head and their Empties are hidden. A parked style stays in your file, ready to load again.</p>
+<p>When a style loads, the status bar says how many of its partings are showing. For example: <strong>Loaded 'Style 1' — 1 parting(s) shown.</strong></p>
+<div class="admonition warning">
+<p class="admonition-title">Turn Preview Off First</p>
+<p>Select <strong>Disable Preview</strong> before you load another style or use <strong>New Style…</strong>. With Preview on, the style you load can come back with its partings' Empties hidden.</p>
+</div>
+
+
+
+
+<p>A parting you hid stays hidden when its style loads again.</p>
+
+
+
+
+
+<h4 id="rename-style">Pencil (Rename Style)<a class="headerlink" href="#rename-style" title="Permanent link">&para;</a></h4>
+<p>The pencil at the right of a style's row renames that style. Type the new name in the <strong>Name</strong> field and confirm.</p>
+<p>Each style on a head needs its own name, and capitals don't count. With <strong>Style 1</strong> on the head, the name "style 1" is refused.</p>
+<p>Renaming a style also renames its collection in the Outliner.</p>
+
+
+
+
+<h4 id="delete-style">Trash (Delete Style)<a class="headerlink" href="#delete-style" title="Permanent link">&para;</a></h4>
+<p>The trash can at the right of a style's row deletes that style, along with its partings and their Empties.</p>
+<p>The trash can is greyed out while the head has only one style. To clear the last style, use <a href="header.html#reset-partings">Reset Partings</a>.</p>
+<p>Blender asks you to confirm first.</p>
+<p>Pressed it by mistake? <strong>Ctrl+Z</strong> straight after brings the style back, partings included.</p>
+
+
+
+
+
+
+
+
+
+
+<h4 id="new-style">New Style…<a class="headerlink" href="#new-style" title="Permanent link">&para;</a></h4>
+<p>Parks the style you have now and gives you an empty one to place into. It stays greyed out until the current style has at least one parting.</p>
+<p>A dialog called <strong>New Parting Style</strong> opens with two names filled in:</p>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>What it names</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Name Current</strong></td>
+<td>The style being parked, for example <strong>Style 1</strong></td>
+</tr>
+<tr>
+<td><strong>New Style</strong></td>
+<td>The empty style you are about to place into, for example <strong>Style 2</strong></td>
+</tr>
+</tbody>
+</table>
+<p>Select <strong>Continue</strong>. The two names must differ, and neither can match another style on the head.</p>
+<p>The status bar confirms it, for example <strong>Parked 'Style 1' (2 Empty(s) hidden). Now stamping into 'Style 2'.</strong> Place partings into the new style as usual. See <a href="placement-keys.html">Place Parting And Placement Keys</a>.</p>
+
+
+
+
+<h4 id="parting-mask">Parting Mask<a class="headerlink" href="#parting-mask" title="Permanent link">&para;</a></h4>
+<p>The <strong>Parting Mask</strong> box sits under the styles. It sets the image each new parting is stamped with.</p>
+<p>The thumbnail shows the mask new partings will use. Select it to pick from your masks. The list holds only masks: images added with <strong>+</strong>, and images your partings already use.</p>
+<p>With no mask picked, a line under the thumbnail says which image will be used. <strong>Using: bundled default</strong> means the mask that ships with the add-on.</p>
+<p>Its tooltip starts: <strong>Displacement map used for new stamps.</strong></p>
+<p>Picking a mask only affects partings you place afterwards. To change partings already on the head, use <a href="#replace-mask">Replace</a>.</p>
+
+
+
+
+<p>To make your own mask, match the one that ships with the add-on:</p>
+<ul>
+<li>A square greyscale PNG, 1024 × 1024 pixels.</li>
+<li>White where the parting shows. Brighter areas show more strongly.</li>
+<li>Black around the edges. Anything past the edge of the image is cut off.</li>
+</ul>
+
+
+
+
+<h4 id="mask-arrows">Arrows<a class="headerlink" href="#mask-arrows" title="Permanent link">&para;</a></h4>
+<p>The two arrows beside the label step back and forward through your masks. They wrap round at the ends.</p>
+<p>Their tooltip reads: <strong>Step to the previous or next parting mask.</strong></p>
+
+
+
+
+<h4 id="add-mask">Plus (Add Parting Mask)<a class="headerlink" href="#add-mask" title="Permanent link">&para;</a></h4>
+<p>The <strong>+</strong> loads a mask from an image file. The image is packed into the .blend, so the file keeps working if the image moves.</p>
+<p>It stays in the file even when no parting uses it.</p>
+<p>Its tooltip reads: <strong>Load an image as a parting mask for new partings. It is packed into the .blend and set to sRGB.</strong></p>
+
+
+
+
+<h4 id="remove-mask">Trash (Remove From Masks)<a class="headerlink" href="#remove-mask" title="Permanent link">&para;</a></h4>
+<p>The trash can takes the shown mask out of your list. Partings already using it keep it, and it stays listed until they are replaced.</p>
+<p>A mask nothing uses is dropped from the file the next time you save.</p>
+<p>Its tooltip reads: <strong>Take the current Parting Mask out of the mask list. Partings already using it keep it.</strong></p>
+
+
+
+
+<h4 id="replace-mask">Replace<a class="headerlink" href="#replace-mask" title="Permanent link">&para;</a></h4>
+<p>Shown at the bottom of the box once the head has partings. It puts the shown mask on the ticked partings, or on the highlighted one when nothing is ticked.</p>
+<p>Position, shape, warp and settings stay as they were. Linked mirrors follow.</p>
+<p>The button names what it will change, for example <strong>Replace on Parting 002</strong> or <strong>Replace on 3 Ticked</strong>. With nothing to change it reads <strong>Replace Mask</strong> and is greyed out.</p>
+<p>If Preview Mode is on, Replace turns it off so the new mask shows.</p>
+<p>It is greyed out while you are placing partings or editing a warp. Its tooltip then says <strong>Finish placing or warp editing first.</strong></p>
+<p>Its tooltip reads: <strong>Put the current Parting Mask on the ticked partings (or the active one when none are ticked). Position, shape, warp and settings are kept.</strong></p>
+
+
+
+
+<div class="admonition stuck">
+<p class="admonition-title">If You're Stuck</p>
+<ul>
+<li>Partings gone after you loaded a style? See <a href="../help/troubleshooting.html#cannot-see-partings">I Cannot See Any Partings</a>.</li>
+<li>Nothing appears when you place? See <a href="../help/troubleshooting.html#place-parting-does-nothing">Place Parting Does Nothing</a>.</li>
+<li>Anything else: <a href="../help/troubleshooting.html#still-stuck">Still Stuck</a>.</li>
+</ul>
+</div>
+<p><strong>Recommended next:</strong> <a href="placement-keys.html">Place Parting And Placement Keys</a></p>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="header.html" class="btn btn-neutral float-left" title="Panel Header"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="placement-keys.html" class="btn btn-neutral float-right" title="Place Parting And Placement Keys">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    
+      <p>Parting Placer Tool · AVILABS by Ebonix</p>
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="header.html" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="placement-keys.html" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "..";</script>
+    <script src="../js/theme_extra.js"></script>
+    <script src="../js/theme.js"></script>
+      <script src="../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

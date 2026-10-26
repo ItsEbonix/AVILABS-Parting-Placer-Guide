@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>Panel Header - Parting Placer Guide</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+        <link href="../css/extra.css" rel="stylesheet" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Panel Header";
+        var mkdocs_page_input_path = "reference/header.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../index.html" class="icon icon-home"> Parting Placer Guide
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../index.html">Welcome</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../requirements.html">Requirements And Compatibility</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../install.html">Install, Update, Uninstall</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Getting Started</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../quickstart.html">Your First Parting In 10 Minutes</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Main Concepts</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../concepts/how-a-parting-works.html">How A Parting Is Built</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../concepts/live-preview-frozen.html">Live, Preview And Frozen Partings</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../concepts/what-baking-produces.html">What Baking Produces</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../concepts/alpha.html">Straight Vs Premultiplied Alpha</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../concepts/styles.html">Styles</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">How-To</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../howto/place-partings.html">Place Partings</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../howto/mirror-partings.html">Mirror Partings</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../howto/several-at-once.html">Work On Several Partings At Once</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../howto/match-appearance.html">Make Every Parting Match</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../howto/viewport-speed.html">Keep The Viewport Fast</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../howto/mirror-modifier.html">Work On A Head With A Mirror Modifier</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../howto/bake-and-save.html">Bake And Save Textures</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../howto/transparent-export.html">Export A Transparent Overlay</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../howto/styles.html">Save And Switch Parting Styles</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../howto/repair-reset.html">Repair Or Reset A Head</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Panel Reference</span></p>
+              <ul class="current">
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">Panel Header</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#sync-from-original">Sync From Original</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#relationship-lines">Relationship Lines</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#repair-partings">Repair Partings</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#reset-partings">Reset Partings</a>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="target.html">Target And Styles</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="placement-keys.html">Place Parting And Placement Keys</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="preview.html">Preview</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="parting-list.html">Parting List</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="appearance.html">Appearance</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="parting-parameters.html">Parting Parameters</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="bake.html">Bake</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="save.html">Saving Textures</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="orphan-stamps.html">Orphan Stamps Warning</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Help</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../help/troubleshooting.html">Troubleshooting</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../help/glossary.html">Glossary</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../help/changelog.html">Changelog</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Parting Placer Guide</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../index.html" class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">Panel Reference</li>
+      <li class="breadcrumb-item active">Panel Header</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h2 id="panel-header">Panel Header<a class="headerlink" href="#panel-header" title="Permanent link">&para;</a></h2>
+<p><strong>Applies to:</strong> Parting Placer V2.0.0 · Blender 4.4 · 5.2</p>
+
+
+<p>Four small icons sit at the right end of the <strong>Parting Placer Tool</strong> panel title. This page covers each one, left to right.</p>
+<figure class="spp-media spp-figure"><img src="../img/spp-header-01-icons-v200.png" alt="Parting Placer Tool panel title with four small icons at its right end" loading="lazy"><figcaption>[1] The four header icons, left to right: Sync From Original, Relationship Lines, Repair Partings, Reset Partings</figcaption></figure>
+
+
+
+<h4 id="sync-from-original">Sync From Original<a class="headerlink" href="#sync-from-original" title="Permanent link">&para;</a></h4>
+<p>The link icon, first from the left. It is on by default. The icon shows a closed link when on and a broken link when off.</p>
+<p>Its tooltip reads: <strong>Match the partings material to the head's original.</strong></p>
+<p>While it is on, edits you make to the head's original material carry across to the partings material. Switch it off to keep the two apart.</p>
+
+
+
+
+
+
+
+
+<h4 id="relationship-lines">Relationship Lines<a class="headerlink" href="#relationship-lines" title="Permanent link">&para;</a></h4>
+<p>The second icon. It switches off the dashed lines Blender draws from every parting's Empty to the head.</p>
+<p>It changes nothing in your file. It applies only to the 3D view the panel is in. It has no effect while <strong>Overlays</strong> are switched off.</p>
+
+
+<h4 id="repair-partings">Repair Partings<a class="headerlink" href="#repair-partings" title="Permanent link">&para;</a></h4>
+<p>The refresh arrow, third from the left. Repair rebuilds the links between partings, Empties and the material if something has come adrift. It also brings older files up to date, including the limits on the appearance sliders.</p>
+<p>Run it once in each existing file after you update the add-on.</p>
+<p>In V2 it also moves each parting's warp onto a shared warp image. That stops partings turning magenta once a head carries about 25 of them. Its message then counts the <strong>warp tile node(s) added</strong>.</p>
+
+
+
+
+<div class="admonition warning">
+<p class="admonition-title">Check Pushed Sliders First</p>
+<p>If a parting's appearance slider sits past its current limit, Repair brings it back to that limit. Check anything you pushed far on purpose before you run it.</p>
+</div>
+<p>Repair and Reset are greyed out until the panel has a head. Set a <strong>Target</strong>, or select a mesh.</p>
+
+
+
+
+
+
+<h4 id="reset-partings">Reset Partings<a class="headerlink" href="#reset-partings" title="Permanent link">&para;</a></h4>
+<p>The trash can, last on the right. Reset removes every parting from the object and puts the material back to its original state.</p>
+<p>To clear the partings and keep the material you tuned, use <strong>Delete All</strong> in the parting list instead. See <a href="parting-list.html#delete-all">Delete All</a>.</p>
+
+
+<div class="admonition stuck">
+<p class="admonition-title">If You're Stuck</p>
+<ul>
+<li>A parting looks doubled? See <a href="../help/troubleshooting.html#parting-looks-doubled">A Parting Looks Doubled Or Folded</a>.</li>
+<li>The face shows in your normal map? See <a href="../help/troubleshooting.html#face-in-normal-map">The Face Shows Through My Baked Normal Map</a>.</li>
+</ul>
+</div>
+<p><strong>Recommended next:</strong> <a href="target.html">Target And Styles</a></p>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../howto/repair-reset.html" class="btn btn-neutral float-left" title="Repair Or Reset A Head"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="target.html" class="btn btn-neutral float-right" title="Target And Styles">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    
+      <p>Parting Placer Tool · AVILABS by Ebonix</p>
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../howto/repair-reset.html" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="target.html" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "..";</script>
+    <script src="../js/theme_extra.js"></script>
+    <script src="../js/theme.js"></script>
+      <script src="../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

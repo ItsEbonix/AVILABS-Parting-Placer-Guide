@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>Parting List - Parting Placer Guide</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+        <link href="../css/extra.css" rel="stylesheet" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Parting List";
+        var mkdocs_page_input_path = "reference/parting-list.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../index.html" class="icon icon-home"> Parting Placer Guide
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../index.html">Welcome</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../requirements.html">Requirements And Compatibility</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../install.html">Install, Update, Uninstall</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Getting Started</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../quickstart.html">Your First Parting In 10 Minutes</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Main Concepts</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../concepts/how-a-parting-works.html">How A Parting Is Built</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../concepts/live-preview-frozen.html">Live, Preview And Frozen Partings</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../concepts/what-baking-produces.html">What Baking Produces</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../concepts/alpha.html">Straight Vs Premultiplied Alpha</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../concepts/styles.html">Styles</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">How-To</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../howto/place-partings.html">Place Partings</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../howto/mirror-partings.html">Mirror Partings</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../howto/several-at-once.html">Work On Several Partings At Once</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../howto/match-appearance.html">Make Every Parting Match</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../howto/viewport-speed.html">Keep The Viewport Fast</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../howto/mirror-modifier.html">Work On A Head With A Mirror Modifier</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../howto/bake-and-save.html">Bake And Save Textures</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../howto/transparent-export.html">Export A Transparent Overlay</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../howto/styles.html">Save And Switch Parting Styles</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../howto/repair-reset.html">Repair Or Reset A Head</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Panel Reference</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="header.html">Panel Header</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="target.html">Target And Styles</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="placement-keys.html">Place Parting And Placement Keys</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="preview.html">Preview</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">Parting List</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#applied-partings">Applied Partings</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#pending-mirrors">Pending Mirrors</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#confirm-all">Confirm All</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#deactivate-all">Deactivate All</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#tick-box">Tick Box</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#row-eye">Eye (One Parting)</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#list-search">Search And Sort Row</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#select-parting">Select</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#duplicate-parting">Duplicate</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#mirror-parting">Mirror</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#move-parting">Up And Down</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#remove-parting">X (Remove)</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#delete-all">Trash (Delete All)</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#fix-duplicate-names">Fix Duplicate Names</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#ticked-eye">Eye (Ticked Row)</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#delete-ticked">Delete</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#select-ticked">Select</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#clear-ticks">Clear</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#show-hide-all">Show All / Hide All</a>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="appearance.html">Appearance</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="parting-parameters.html">Parting Parameters</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="bake.html">Bake</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="save.html">Saving Textures</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="orphan-stamps.html">Orphan Stamps Warning</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Help</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../help/troubleshooting.html">Troubleshooting</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../help/glossary.html">Glossary</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../help/changelog.html">Changelog</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Parting Placer Guide</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../index.html" class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">Panel Reference</li>
+      <li class="breadcrumb-item active">Parting List</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h2 id="parting-list">Parting List<a class="headerlink" href="#parting-list" title="Permanent link">&para;</a></h2>
+<p><strong>Applies to:</strong> Parting Placer V2.0.0 · Blender 4.4 · 5.2</p>
+
+
+<p>Every parting you place shows up in this list. From here you pick, hide, copy, mirror, reorder and remove them.</p>
+
+
+<figure class="spp-media spp-figure"><img src="../img/spp-parting-list-01-list-v200.png" alt="Applied Partings list with two rows, a column of buttons on its right, a ticked row bar with Delete, Select and Clear, and Show All and Hide All underneath" loading="lazy"><figcaption>[1] The parting list with two partings, one ticked</figcaption></figure>
+
+
+
+
+
+<h4 id="applied-partings">Applied Partings<a class="headerlink" href="#applied-partings" title="Permanent link">&para;</a></h4>
+<p>The heading counts your partings, for example <strong>Applied Partings (2)</strong>. New partings are named <strong>Parting 001</strong>, <strong>Parting 002</strong> and so on.</p>
+
+
+
+
+<h4 id="pending-mirrors">Pending Mirrors<a class="headerlink" href="#pending-mirrors" title="Permanent link">&para;</a></h4>
+<p>A mirror starts out pending, so you can see it before you keep it. While any are pending, a line under the heading counts them, for example <strong>Pending Mirrors: 2</strong>.</p>
+<p>With more than five pending, a warning appears: <strong>Confirm or deactivate pending mirrors</strong>.</p>
+
+
+<h4 id="confirm-all">Confirm All<a class="headerlink" href="#confirm-all" title="Permanent link">&para;</a></h4>
+<p>Keeps every pending mirror as a parting of its own. The button shows how many, for example <strong>Confirm All (2)</strong>. The README calls it <strong>Confirm All Pending</strong>.</p>
+
+
+<h4 id="deactivate-all">Deactivate All<a class="headerlink" href="#deactivate-all" title="Permanent link">&para;</a></h4>
+<p>Throws away every pending mirror. The README calls it <strong>Deactivate All Pending</strong>.</p>
+<p>Blender asks you to confirm first.</p>
+
+
+
+
+
+
+<h4 id="tick-box">Tick Box<a class="headerlink" href="#tick-box" title="Permanent link">&para;</a></h4>
+<p>Tick the box beside a parting's name to pick it for the ticked-row buttons. Tick as many as you like, in any order. <strong>Shift</strong>-click a second box to tick every row between the two.</p>
+
+
+<h4 id="row-eye">Eye (One Parting)<a class="headerlink" href="#row-eye" title="Permanent link">&para;</a></h4>
+<p>The eye at the end of a row hides that parting, or shows it again. Hiding a parting also hides its pending mirror, if it has one.</p>
+<p>A hidden parting stays hidden when you switch styles and back. See <a href="target.html#style">Style</a>.</p>
+
+
+
+
+<h4 id="list-search">Search And Sort Row<a class="headerlink" href="#list-search" title="Permanent link">&para;</a></h4>
+<p>The row under the list is always open. Type in <strong>Search</strong> to show only partings whose name contains your text.</p>
+<p>The sort buttons switch between your stack order and A to Z, and flip the order.</p>
+
+
+
+
+<h4 id="select-parting">Select<a class="headerlink" href="#select-parting" title="Permanent link">&para;</a></h4>
+<p>The arrow beside the list selects the active parting's Empty in the viewport, so you can move it.</p>
+
+
+<h4 id="duplicate-parting">Duplicate<a class="headerlink" href="#duplicate-parting" title="Permanent link">&para;</a></h4>
+<p>Makes a copy of the active parting, along with its own Empty.</p>
+<p>The copy carries the whole warp, lattice included, and sits on the head the same way as its source.</p>
+
+
+
+
+
+
+<h4 id="mirror-parting">Mirror<a class="headerlink" href="#mirror-parting" title="Permanent link">&para;</a></h4>
+<p>Makes a pending mirror of the active parting on the other side of the head. The status bar says <strong>Pending mirror created.</strong></p>
+<p>While the parting has a pending mirror, the button stays pressed in. Select it again to choose <strong>Confirm (make permanent)</strong> or <strong>Deactivate (destroy mirror)</strong>.</p>
+<p>For the full workflow, see <a href="../howto/mirror-partings.html">Mirror Partings</a>.</p>
+<p>Mirrors carry the whole warp. A linked mirror follows lattice edits on its source while you drag. See <a href="parting-parameters.html#edit-warp">Edit Warp</a>.</p>
+
+
+
+
+
+
+
+
+
+
+<h4 id="move-parting">Up And Down<a class="headerlink" href="#move-parting" title="Permanent link">&para;</a></h4>
+<p>Moves the active parting up or down the stack. Up is greyed out on the top row, and Down on the bottom row.</p>
+<div class="admonition warning">
+<p class="admonition-title">Moving A Parting Into The Top Row</p>
+<p>A move that puts a different parting in the top row strips the head's skin texture. The head turns a flat tan. Press <strong>Ctrl+Z</strong> straight away to bring it back. <strong>Repair Partings</strong> does not fix it.</p>
+</div>
+<p>Where two partings overlap, the one lower in the list is drawn on top. Moving a parting changes which one shows.</p>
+
+
+
+
+
+
+
+
+
+
+<h4 id="remove-parting">X (Remove)<a class="headerlink" href="#remove-parting" title="Permanent link">&para;</a></h4>
+<p>Removes the active parting and its Empty.</p>
+
+
+<h4 id="delete-all">Trash (Delete All)<a class="headerlink" href="#delete-all" title="Permanent link">&para;</a></h4>
+<p>The trash can under <strong>X</strong> removes every parting on the head. It keeps the material you have been tuning, so the next parting you place carries your settings over.</p>
+<p>The status bar reports what went, ending with <strong>Material kept.</strong></p>
+<p>To put the head's plain skin material back as well, use <a href="header.html#reset-partings">Reset Partings</a> instead.</p>
+<p>Blender asks first, for example <strong>Delete all 3 parting(s)?</strong> with <strong>Delete All</strong> and <strong>Cancel</strong>.</p>
+
+
+
+
+
+
+<h4 id="fix-duplicate-names">Fix Duplicate Names<a class="headerlink" href="#fix-duplicate-names" title="Permanent link">&para;</a></h4>
+<p>If two partings end up with the same name, a red button appears, for example <strong>Fix 2 Duplicate Name(s)</strong>. Select it to give each one its own name.</p>
+
+
+<h4 id="ticked-eye">Eye (Ticked Row)<a class="headerlink" href="#ticked-eye" title="Permanent link">&para;</a></h4>
+<p>Once you tick a parting, a row appears above <strong>Show All / Hide All</strong>. It starts with a count, for example <strong>2 ticked</strong>.</p>
+<p>Its eye hides the ticked partings, or shows them again. If some are hidden and some showing, it hides all of them. The icon always shows what the next press will do.</p>
+
+
+<h4 id="delete-ticked">Delete<a class="headerlink" href="#delete-ticked" title="Permanent link">&para;</a></h4>
+<p>Removes every ticked parting.</p>
+
+
+<h4 id="select-ticked">Select<a class="headerlink" href="#select-ticked" title="Permanent link">&para;</a></h4>
+<p>Selects the ticked partings' Empties in the viewport, so you can move them together. Hidden partings are skipped, and the status bar says how many.</p>
+
+
+<h4 id="clear-ticks">Clear<a class="headerlink" href="#clear-ticks" title="Permanent link">&para;</a></h4>
+<p>Unticks everything.</p>
+
+
+<h4 id="show-hide-all">Show All / Hide All<a class="headerlink" href="#show-hide-all" title="Permanent link">&para;</a></h4>
+<p>Shows or hides every parting on the head at once.</p>
+
+
+
+
+<div class="admonition stuck">
+<p class="admonition-title">If You're Stuck</p>
+<ul>
+<li>A parting has gone missing? See <a href="../help/troubleshooting.html#cannot-see-partings">I Cannot See Any Partings</a>.</li>
+<li>Can't find the mirror button? See <a href="../help/troubleshooting.html#mirror-toggle-missing">I Cannot See The Mirror Toggle In The Sidebar</a>.</li>
+<li>Anything else: <a href="../help/troubleshooting.html#still-stuck">Still Stuck</a>.</li>
+</ul>
+</div>
+<p><strong>Recommended next:</strong> <a href="appearance.html">Appearance</a></p>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="preview.html" class="btn btn-neutral float-left" title="Preview"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="appearance.html" class="btn btn-neutral float-right" title="Appearance">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    
+      <p>Parting Placer Tool · AVILABS by Ebonix</p>
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="preview.html" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="appearance.html" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "..";</script>
+    <script src="../js/theme_extra.js"></script>
+    <script src="../js/theme.js"></script>
+      <script src="../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

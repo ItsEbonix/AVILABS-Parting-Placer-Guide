@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>Parting Parameters - Parting Placer Guide</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+        <link href="../css/extra.css" rel="stylesheet" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Parting Parameters";
+        var mkdocs_page_input_path = "reference/parting-parameters.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../index.html" class="icon icon-home"> Parting Placer Guide
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../index.html">Welcome</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../requirements.html">Requirements And Compatibility</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../install.html">Install, Update, Uninstall</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Getting Started</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../quickstart.html">Your First Parting In 10 Minutes</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Main Concepts</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../concepts/how-a-parting-works.html">How A Parting Is Built</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../concepts/live-preview-frozen.html">Live, Preview And Frozen Partings</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../concepts/what-baking-produces.html">What Baking Produces</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../concepts/alpha.html">Straight Vs Premultiplied Alpha</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../concepts/styles.html">Styles</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">How-To</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../howto/place-partings.html">Place Partings</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../howto/mirror-partings.html">Mirror Partings</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../howto/several-at-once.html">Work On Several Partings At Once</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../howto/match-appearance.html">Make Every Parting Match</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../howto/viewport-speed.html">Keep The Viewport Fast</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../howto/mirror-modifier.html">Work On A Head With A Mirror Modifier</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../howto/bake-and-save.html">Bake And Save Textures</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../howto/transparent-export.html">Export A Transparent Overlay</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../howto/styles.html">Save And Switch Parting Styles</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../howto/repair-reset.html">Repair Or Reset A Head</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Panel Reference</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="header.html">Panel Header</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="target.html">Target And Styles</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="placement-keys.html">Place Parting And Placement Keys</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="preview.html">Preview</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="parting-list.html">Parting List</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="appearance.html">Appearance</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">Parting Parameters</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#rotation">Rotation</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#scale-x-y">Scale X / Scale Y</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#corners">Corner BL / BR / TL / TR</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#corner-markers">Show Corner Markers</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#marker-inset">Inset</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#marker-lift">Lift</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#marker-size">Size</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#edit-warp">Edit Warp</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#convert-to-lattice">Convert To Lattice</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#lattice-size">Lattice Size</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#reset-to-corners">Reset To Corners</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#soft-radius">Soft Radius</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#fold-guard">Fold Guard</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#copy-settings-to-all">Copy Settings To All</a>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="bake.html">Bake</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="save.html">Saving Textures</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="orphan-stamps.html">Orphan Stamps Warning</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Help</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../help/troubleshooting.html">Troubleshooting</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../help/glossary.html">Glossary</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../help/changelog.html">Changelog</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Parting Placer Guide</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../index.html" class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">Panel Reference</li>
+      <li class="breadcrumb-item active">Parting Parameters</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h2 id="parting-parameters">Parting Parameters<a class="headerlink" href="#parting-parameters" title="Permanent link">&para;</a></h2>
+<p><strong>Applies to:</strong> Parting Placer V2.0.0 · Blender 4.4 · 5.2</p>
+
+
+<p>This box holds the settings for the one parting picked in the list. It only appears while a parting is picked, and its second line names that parting.</p>
+
+
+<figure class="spp-media spp-figure"><img src="../img/spp-parting-parameters-01-box-v200.png" alt="Parting Parameters box showing the parting&#x27;s name, Rotation, Scale X, Scale Y, four Corner rows with X and Y fields, Hide Corner Markers, Inset, Lift and Size, then Edit Warp, Convert to Lattice and Copy Settings to All" loading="lazy"><figcaption>[1] Parting Parameters with corner markers shown</figcaption></figure>
+
+
+
+<h4 id="rotation">Rotation<a class="headerlink" href="#rotation" title="Permanent link">&para;</a></h4>
+<p>Turns the parting on the head. The default is <strong>0</strong>.</p>
+<p>The value is in radians, not degrees. A quarter turn is <strong>1.571</strong>, and a half turn is <strong>3.142</strong>.</p>
+
+
+
+
+
+
+<h4 id="scale-x-y">Scale X / Scale Y<a class="headerlink" href="#scale-x-y" title="Permanent link">&para;</a></h4>
+<p>Fine-tune the parting's size along each side. Higher values make it <strong>smaller</strong>. Lower values make it bigger.</p>
+<p>The template default is <strong>5</strong>, but a placed parting can show other values.</p>
+
+
+
+
+
+
+<h4 id="corners">Corner BL / BR / TL / TR<a class="headerlink" href="#corners" title="Permanent link">&para;</a></h4>
+<p>Four rows, one per corner of the parting, each with an X and a Y field. All start at <strong>0, 0</strong>.</p>
+<p>Turn on <a href="#corner-markers">Show Corner Markers</a> to see which corner of the parting each row belongs to.</p>
+<p>Changing a corner's X or Y pulls that corner of the parting out of square. Use it to bend a parting's shape to fit the head.</p>
+<p>On a lattice parting the four rows stay in the box, but the lattice sets the shape. See <a href="#convert-to-lattice">Convert To Lattice</a>.</p>
+
+
+
+
+
+
+
+
+<h4 id="corner-markers">Show Corner Markers<a class="headerlink" href="#corner-markers" title="Permanent link">&para;</a></h4>
+<p>Shows a label at each corner of the picked parting, so you can tell which way round it is. The button then reads <strong>Hide Corner Markers</strong>.</p>
+<p>The markers are display only. Nothing is added to your scene and nothing is rendered.</p>
+
+
+<h4 id="marker-inset">Inset<a class="headerlink" href="#marker-inset" title="Permanent link">&para;</a></h4>
+<p>Shown while corner markers are on. It sets how far out the labels sit, as a fraction of the way to each corner. At <strong>1.0</strong> they sit on the corners themselves. The default is <strong>0.7</strong>, from 0 to 1.5.</p>
+<p>The README calls it <strong>Marker Inset</strong>.</p>
+
+
+<h4 id="marker-lift">Lift<a class="headerlink" href="#marker-lift" title="Permanent link">&para;</a></h4>
+<p>Shown while corner markers are on. It raises the labels off the surface so they read clear of the parting. The default is <strong>0.6</strong>.</p>
+<p>The README calls it <strong>Marker Lift</strong>.</p>
+
+
+<h4 id="marker-size">Size<a class="headerlink" href="#marker-size" title="Permanent link">&para;</a></h4>
+<p>Shown while corner markers are on. It sets the text size of the labels. The default is <strong>13</strong>, from 6 upwards.</p>
+<p>Its tooltip says it follows the <strong>Resolution Scale</strong> in your Blender preferences. The labels stay in step with the rest of the interface.</p>
+
+
+<h4 id="edit-warp">Edit Warp<a class="headerlink" href="#edit-warp" title="Permanent link">&para;</a></h4>
+<p>Bends the picked parting by dragging handles in the viewport. A corner warp has 4 handles. A lattice has one handle for each lattice point.</p>
+<p>Select <strong>Edit Warp</strong>, then drag a handle with the left mouse button. The middle mouse button still orbits the view.</p>
+<p>Press <strong>Enter</strong> to keep the result. <strong>Esc</strong> or right-click puts the warp back as it was. Selecting <strong>Edit Warp</strong> again also keeps the result.</p>
+<p>The button stays pressed while that parting is being edited.</p>
+<p>While you hold a handle, scroll changes <a href="#soft-radius">Soft Radius</a>. <strong>Shift</strong> and scroll changes <a href="#fold-guard">Fold Guard</a>.</p>
+<p>A key guide in the viewport lists these keys while you edit. The sidebar stays usable during an edit.</p>
+<p>Its tooltip reads: <strong>Drag the handles in the viewport to warp this parting.</strong></p>
+<p>Mirror and Duplicate carry the whole warp. A linked mirror follows lattice edits on its source while you drag.</p>
+
+
+
+
+<h4 id="convert-to-lattice">Convert To Lattice<a class="headerlink" href="#convert-to-lattice" title="Permanent link">&para;</a></h4>
+<p>Shown on a parting with a corner warp. It turns the corner warp into a 2 x 2 lattice without changing how the parting looks.</p>
+<p>It is greyed out while that parting's warp is being edited.</p>
+
+
+
+
+<h4 id="lattice-size">Lattice Size<a class="headerlink" href="#lattice-size" title="Permanent link">&para;</a></h4>
+<p>Shown on a lattice parting. <strong>P-</strong> and <strong>P+</strong> take a column of handles away or add one. <strong>Q-</strong> and <strong>Q+</strong> do the same for rows.</p>
+<p>Each side goes from 2 to 8, so a lattice has up to 64 handles. The row underneath shows the size, for example <strong>Lattice 3 x 4</strong>.</p>
+<p>Changing the size resamples the warp to fit the new grid, so its shape can shift. It shifts more when you take a row or column away.</p>
+<p>Its tooltip reads: <strong>Add or remove a lattice row or column. The current warp is resampled to fit the new grid, so its shape can shift, more so when removing one.</strong></p>
+<p>These buttons are greyed out while that parting's warp is being edited.</p>
+
+
+
+
+<h4 id="reset-to-corners">Reset To Corners<a class="headerlink" href="#reset-to-corners" title="Permanent link">&para;</a></h4>
+<p>Shown on a lattice parting, beside the size. It puts the parting back to a corner warp.</p>
+<p>The corner warp comes from the four <strong>Corner</strong> rows, so the lattice shape is not kept.</p>
+<p>It is greyed out while that parting's warp is being edited.</p>
+
+
+
+
+<h4 id="soft-radius">Soft Radius<a class="headerlink" href="#soft-radius" title="Permanent link">&para;</a></h4>
+<p>Shown on a lattice parting. Default <strong>0.5</strong>, from 0 to 2.</p>
+<p>How far a drag pulls nearby handles along with the one you hold, as a share of the lattice size. At <strong>0</strong> only that handle moves.</p>
+<p>A change applies from the next handle you grab. Scroll changes it on a corner warp too, where the slider is hidden.</p>
+<p>Its tooltip reads: <strong>Soft-radius falloff for Edit Warp dragging, as a fraction of the lattice size. 0 drags a single control point.</strong></p>
+
+
+
+
+<h4 id="fold-guard">Fold Guard<a class="headerlink" href="#fold-guard" title="Permanent link">&para;</a></h4>
+<p>Shown on a lattice parting. Default <strong>0.05</strong>, from 0 to 0.5.</p>
+<p>Stops a lattice warp from folding back through itself. Higher values stop it sooner. At <strong>0</strong> the warp can go right up to the fold.</p>
+<p>It has no effect on a corner warp. A change shows the next time the warp is rebuilt, for example on your next drag.</p>
+<p>Its tooltip reads: <strong>How far the warp is kept from folding through itself. Higher caps the warp sooner (gentler); 0 lets it warp right up to the fold.</strong></p>
+
+
+
+
+<h4 id="copy-settings-to-all">Copy Settings To All<a class="headerlink" href="#copy-settings-to-all" title="Permanent link">&para;</a></h4>
+<p>Copies the picked parting's <a href="appearance.html">Appearance</a> settings onto every other parting on the head. Use it when you have tuned one parting by eye and want the rest to match.</p>
+<p>It is a one-time copy. Later edits to that parting do not follow. Press <strong>Ctrl+Z</strong> to undo it.</p>
+<p>The button is hidden while <a href="appearance.html#link-appearance">Link Appearance</a> is on, because every parting already shares one set of values.</p>
+<p>With only one parting on the head, the status bar says <strong>Only one parting — nothing to copy to.</strong></p>
+
+
+<div class="admonition stuck">
+<p class="admonition-title">If You're Stuck</p>
+<ul>
+<li>Can't see this box? Pick a parting in the <a href="parting-list.html">Parting List</a> first.</li>
+<li>A parting looks doubled or folded? See <a href="../help/troubleshooting.html#parting-looks-doubled">A Parting Looks Doubled Or Folded</a>.</li>
+<li>Anything else: <a href="../help/troubleshooting.html#still-stuck">Still Stuck</a>.</li>
+</ul>
+</div>
+<p><strong>Recommended next:</strong> <a href="bake.html">Bake</a></p>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="appearance.html" class="btn btn-neutral float-left" title="Appearance"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="bake.html" class="btn btn-neutral float-right" title="Bake">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    
+      <p>Parting Placer Tool · AVILABS by Ebonix</p>
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="appearance.html" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="bake.html" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "..";</script>
+    <script src="../js/theme_extra.js"></script>
+    <script src="../js/theme.js"></script>
+      <script src="../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>
