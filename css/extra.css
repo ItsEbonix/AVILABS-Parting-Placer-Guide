@@ -107,7 +107,12 @@ body,
 .rst-content table.docutils,
 .rst-content table { color: var(--spp-text); }
 .rst-content table td, .rst-content table th { white-space: normal; padding: 8px 12px; border-color: var(--spp-border); }
+/* The theme's zebra rule (.rst-content table.docutils:not(.field-list)
+   tr:nth-child(2n-1) td) outranks a plain selector, so match it. Header text
+   follows the page colour instead of the theme's black. */
+.rst-content table.docutils:not(.field-list) tr:nth-child(2n-1) td,
 .wy-table-odd td, .rst-content table tr:nth-child(2n-1) td { background-color: transparent; }
+.rst-content table.docutils thead { color: var(--spp-text); }
 
 /* Media embeds from macros/main.py */
 .spp-media { margin: 1.5em 0; }
@@ -138,4 +143,18 @@ footer, .rst-footer-buttons { color: var(--spp-muted); }
     border-color: #3a3842;
   }
   .wy-menu-vertical li.current a:hover { background: #34333c; }
+}
+
+/* Callout titles: the theme's light blue and orange fail contrast with
+   white text (2.4:1 and 1.8:1). These give 6.7:1 and 6.8:1. */
+.rst-content .admonition-title,
+.rst-content .note .admonition-title { background: #1f5f99; color: #fff; }
+.rst-content .warning .admonition-title { background: #8a4a12; color: #fff; }
+
+/* Sidebar sections under the active page: the theme paints them light
+   grey (#c9c9c9). The sidebar is dark in both modes, so keep them dark. */
+.wy-menu-vertical li.toctree-l2.current > a,
+.wy-menu-vertical li.toctree-l2.current li.toctree-l3 > a {
+  background: #34333c;
+  color: var(--spp-side-text);
 }
