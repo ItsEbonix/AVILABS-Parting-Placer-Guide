@@ -198,6 +198,7 @@
 <li><strong>Added</strong> The bin takes the shown mask out of your mask list. Partings already using it keep it. [panel: target]</li>
 <li><strong>Added</strong> Replace puts the shown mask on the ticked partings, or on the highlighted one when nothing is ticked. Position, shape and settings stay as they were, and linked mirrors follow. The button names what it will change. If Preview Mode is on it turns off so the new mask shows. [panel: target]</li>
 <li><strong>Changed</strong> The mask list shows only masks: images added with +, and images your partings already use. Baked maps and other textures in the file no longer appear in it. [panel: target]</li>
+<li><strong>Added</strong> Five bundled partings: Square Sharp Edge, Square Soft Edge, Triangle, Square 2x1 and Square Brick 2x2. Pick one from the menu beside + in the Parting Mask box. It is added and saved inside the .blend the same way as a mask you add with +. [panel: target]</li>
 <li><strong>Changed</strong> Add Parting is now Place Parting, with a target icon. It is larger and has space around it. [panel: placement-keys]</li>
 <li><strong>Changed</strong> Style and Parting Mask each sit in their own box. [panel: target]</li>
 <li><strong>Added</strong> Edit Warp, in Parting Parameters. Drag the handles in the viewport to warp a parting. Enter confirms, and Esc or right-click puts the warp back as it was. The button stays pressed while that parting is being edited, and pressing it again also confirms. [panel: parting-parameters]</li>
@@ -207,6 +208,10 @@
 <li><strong>Added</strong> You can keep using the sidebar during Edit Warp. A Soft Radius change applies from the next handle you grab. The lattice buttons are greyed out while that parting's warp is being edited, since they change the handles you are dragging. [panel: parting-parameters]</li>
 <li><strong>Added</strong> Mirror and Duplicate carry a parting's lattice warp. Linked mirrors follow lattice edits on their source live while you drag, and go back with it when you cancel. [panel: parting-list]</li>
 <li><strong>Changed</strong> Parting Parameters now runs Show Corner Markers, then the marker settings while markers are on. Edit Warp and the warp controls come next, with a gap between the two. [panel: parting-parameters]</li>
+<li><strong>Added</strong> Empty Size, under Show All and Hide All. It sets how big every parting's Empty draws in the viewport, and new partings take the same size. Blender scales an Empty with its parting, so bigger partings still draw bigger Empties. [panel: parting-list]</li>
+<li><strong>Added</strong> Copy to Ticked. It copies the appearance settings of the parting you are editing onto the ticked partings only. With one parting ticked, the button names it. [panel: appearance]</li>
+<li><strong>Changed</strong> Copy Settings to All is now Copy to All, and has moved from Parting Parameters to the Appearance block, beside Copy to Ticked. Both show while Link Appearance is off. [panel: appearance] [panel: parting-parameters]</li>
+<li><strong>Added</strong> An info button left of the panel title. It shows the version, with links to the user guide and to help@ebonix.com. [panel: header]</li>
 </ul>
 <h4 id="v1-3-1">V1.3.1<a class="headerlink" href="#v1-3-1" title="Permanent link">&para;</a></h4>
 <p>25 August 2026. Existing files open and work as before. Partings with strong corner warps can be refreshed to clear a doubled look — run Repair Partings once. Everything else is new list tools and small fixes.</p>

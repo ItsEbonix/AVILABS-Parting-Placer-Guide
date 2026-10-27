@@ -121,6 +121,10 @@
     </li>
     <li class="toctree-l2"><a class="reference internal" href="#detail">Detail</a>
     </li>
+    <li class="toctree-l2"><a class="reference internal" href="#copy-to-ticked">Copy To Ticked</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#copy-to-all">Copy To All</a>
+    </li>
     <li class="toctree-l2"><a class="reference internal" href="#live-bump">Live Bump</a>
     </li>
     <li class="toctree-l2"><a class="reference internal" href="#bump-strength">Bump Strength</a>
@@ -211,7 +215,7 @@
 <p>The link icon at the right of the heading. It is off by default.</p>
 <p>Its tooltip reads: <strong>Share appearance settings across all partings.</strong></p>
 <p>Turn it on to give every parting the same look. The values of the first parting in the list become the shared set.</p>
-<p>With it off, each parting keeps its own values. <strong>Copy Settings To All</strong> is then available on each parting. See <a href="parting-parameters.html#copy-settings-to-all">Copy Settings To All</a>.</p>
+<p>With it off, each parting keeps its own values, and the box shows <strong>Copy to Ticked</strong> and <strong>Copy to All</strong>. See <a href="#copy-to-ticked">Copy To Ticked</a>.</p>
 <p>Turn it off again and each parting keeps the shared values until you change them. Turning it back on overwrites every parting with the first parting's values.</p>
 
 
@@ -265,6 +269,53 @@
 <h4 id="detail">Detail<a class="headerlink" href="#detail" title="Permanent link">&para;</a></h4>
 <p>Default <strong>1</strong>, from 0 to 2 on the slider.</p>
 <p><strong>Detail</strong> darkens the parting. At <strong>0</strong> the bake matches your <strong>Hair Color</strong> swatch. Higher values make it darker. At <strong>2</strong> it is much darker. Lower <strong>Detail</strong> if you want the bake closer to the swatch.</p>
+
+
+
+
+<h4 id="copy-to-ticked">Copy To Ticked<a class="headerlink" href="#copy-to-ticked" title="Permanent link">&para;</a></h4>
+<p>The left button of the pair under the sliders. The pair shows while <strong>Link Appearance</strong> is off and a parting is picked.</p>
+<p>It copies the picked parting's settings onto the partings you ticked in the <a href="parting-list.html#tick-box">parting list</a>. It copies <strong>Hair Color</strong> and every slider in this box, including <strong>Bump Strength</strong> and <strong>Bump Distance</strong>. The picked parting is never counted, even if it is ticked.</p>
+<p>The button names what it will change:</p>
+<table>
+<thead>
+<tr>
+<th>Ticked</th>
+<th>The button reads</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Nothing, or only the picked parting</td>
+<td><strong>Copy to Ticked</strong>, greyed out</td>
+</tr>
+<tr>
+<td>One other parting</td>
+<td>Its name, for example <strong>Copy to Parting 010</strong></td>
+</tr>
+<tr>
+<td>Several</td>
+<td>The count, for example <strong>Copy to 3 Ticked</strong></td>
+</tr>
+</tbody>
+</table>
+<p>The status bar then says, for example, <strong>Copied settings to 1 ticked parting(s).</strong> If the ticked partings already match, it says <strong>Ticked partings already match.</strong> and nothing changes.</p>
+<p>A pending mirror takes the new values from its source. Press <strong>Ctrl+Z</strong> to undo the copy.</p>
+
+
+
+
+
+
+
+
+<h4 id="copy-to-all">Copy To All<a class="headerlink" href="#copy-to-all" title="Permanent link">&para;</a></h4>
+<p>The right button of the pair. It copies the picked parting's settings onto every other parting on the head. Use it when you have tuned one parting by eye and want the rest to match.</p>
+<p>It is a one-time copy. Later edits to that parting do not follow. Press <strong>Ctrl+Z</strong> to undo it.</p>
+<p>With only one parting on the head, the status bar says <strong>Only one parting — nothing to copy to.</strong></p>
+<p>It used to sit in Parting Parameters as <strong>Copy Settings to All</strong>.</p>
+
+
 
 
 
