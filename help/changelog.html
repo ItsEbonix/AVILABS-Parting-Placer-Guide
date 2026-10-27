@@ -173,133 +173,181 @@
               
                 <h2 id="changelog">Changelog<a class="headerlink" href="#changelog" title="Permanent link">&para;</a></h2>
 <p><strong>Applies to:</strong> Parting Placer V2.0.0 · Blender 4.4 · 5.2</p>
-<p>What changed in each version of the add-on, newest first. Each entry is tagged with the part of the panel it touches.</p>
+<p>What changed in each version of the add-on, newest first, grouped by type of change.</p>
 
 
 <h4 id="v2-0-0">V2.0.0<a class="headerlink" href="#v2-0-0" title="Permanent link">&para;</a></h4>
 <p>27 October 2026. If you have partings in an existing file, run Repair Partings once after updating.</p>
+<p><strong>ADDED</strong></p>
 <ul>
-<li><strong>Added</strong> Live Bump switch, in its own block at the bottom of Appearance. Bump costs the most when Blender rebuilds the material, so it now starts off and placing partings stays quick. Bump Strength and Bump Distance show when it is on. The block reminds you which way to set it: "Turn on when baking partings" while off, "Turn off whilst placing partings" while on. [panel: appearance]</li>
-<li><strong>Added</strong> Files saved before this version open with Live Bump matching how their partings were saved. If some had bump and some did not, it opens on. [panel: appearance]</li>
-<li><strong>Added</strong> Freeze and Apply now warn you in their confirm box when the last bake had no Normal map. [panel: bake]</li>
-<li><strong>Added</strong> Parting Mask viewer. A thumbnail shows the mask new partings will use. Click it to pick from your masks. With no mask chosen, a line underneath says which image will be used. [panel: target]</li>
-<li><strong>Added</strong> + adds a mask from an image file. It is saved inside the .blend, so the file keeps working if the image moves. [panel: target]</li>
-<li><strong>Added</strong> Arrows beside the viewer step through your masks. [panel: target]</li>
-<li><strong>Added</strong> The bin takes the shown mask out of your mask list. Partings already using it keep it. [panel: target]</li>
-<li><strong>Added</strong> Replace puts the shown mask on the ticked partings, or on the highlighted one when nothing is ticked. Position, shape and settings stay as they were, and linked mirrors follow. The button names what it will change. If Preview Mode is on it turns off so the new mask shows. [panel: target]</li>
-<li><strong>Added</strong> Five bundled partings: Square Sharp Edge, Square Soft Edge, Triangle, Square 2x1 and Square Brick 2x2. Pick one from the menu beside + in the Parting Mask box. It is added and saved inside the .blend the same way as a mask you add with +. [panel: target]</li>
-<li><strong>Added</strong> Edit Warp, in Parting Parameters. Drag the handles in the viewport to warp a parting. Enter confirms, and Esc or right-click puts the warp back as it was. The button stays pressed while that parting is being edited, and pressing it again also confirms. [panel: parting-parameters]</li>
-<li><strong>Added</strong> Lattice warps. Convert to Lattice turns a parting's corner warp into a 2 x 2 lattice without changing how it looks. P- and P+, Q- and Q+ change the rows and columns, from 2 to 8 each way. The warp is resampled to fit, so its shape can shift. Reset to Corners goes back to a corner warp. [panel: parting-parameters]</li>
-<li><strong>Added</strong> Soft Radius and Fold Guard, under the lattice controls. Soft Radius pulls nearby handles along with the one you drag; at 0 only that handle moves. Fold Guard stops a lattice warp folding back through itself, and higher values stop it sooner. While you hold a handle, scroll changes Soft Radius and Shift+scroll changes Fold Guard. [panel: parting-parameters]</li>
-<li><strong>Added</strong> Edit Warp has its own key guide in the viewport, in the same style as placing partings. Soft Radius and Fold Guard show with their values while you hold a handle. Fold Guard is listed on lattice partings only. [panel: parting-parameters]</li>
-<li><strong>Added</strong> You can keep using the sidebar during Edit Warp. A Soft Radius change applies from the next handle you grab. The lattice buttons are greyed out while that parting's warp is being edited, since they change the handles you are dragging. [panel: parting-parameters]</li>
-<li><strong>Added</strong> Mirror and Duplicate carry a parting's lattice warp. Linked mirrors follow lattice edits on their source live while you drag, and go back with it when you cancel. [panel: parting-list]</li>
-<li><strong>Added</strong> Empty Size, under Show All and Hide All. It sets how big every parting's Empty draws in the viewport, and new partings take the same size. Blender scales an Empty with its parting, so bigger partings still draw bigger Empties. [panel: parting-list]</li>
-<li><strong>Added</strong> Copy to Ticked. It copies the appearance settings of the parting you are editing onto the ticked partings only. With one parting ticked, the button names it. [panel: appearance]</li>
-<li><strong>Added</strong> An info button left of the panel title. It shows the version, with links to the user guide and to help@ebonix.com. [panel: header]</li>
-<li><strong>Changed</strong> Normal cannot be ticked in the Bake block while Live Bump is off, since there would be no bump to bake. [panel: bake]</li>
-<li><strong>Changed</strong> New partings stick to the surface by position only, and the tool sets their facing rotation itself. They face straight out from the surface wherever they are placed, whatever their proportions. [panel: placement-keys]</li>
-<li><strong>Changed</strong> Moving a new parting with G turns it to face the surface at its new spot as you drag. Any twist you added with R stays. [panel: placement-keys]</li>
-<li><strong>Changed</strong> Duplicate gives the copy the same surface weld as its source, so a copy sits exactly the way its original does. [panel: parting-list]</li>
-<li><strong>Changed</strong> Partings already placed are not changed. Files from earlier versions keep their old weld, and Repair Partings leaves it alone, so anything you have placed stays put. [panel: placement-keys]</li>
-<li><strong>Changed</strong> Linked mirrors still follow their source. Once unlinked, a mirror turns to face the surface the next time you move it. [panel: parting-list]</li>
-<li><strong>Changed</strong> The mask list shows only masks: images added with +, and images your partings already use. Baked maps and other textures in the file no longer appear in it. [panel: target]</li>
-<li><strong>Changed</strong> Add Parting is now Place Parting, with a target icon. It is larger and has space around it. [panel: placement-keys]</li>
-<li><strong>Changed</strong> Style and Parting Mask each sit in their own box. [panel: target]</li>
-<li><strong>Changed</strong> Parting Parameters now runs Show Corner Markers, then the marker settings while markers are on. Edit Warp and the warp controls come next, with a gap between the two. [panel: parting-parameters]</li>
-<li><strong>Changed</strong> Copy Settings to All is now Copy to All, and has moved from Parting Parameters to the Appearance block, beside Copy to Ticked. Both show while Link Appearance is off. [panel: appearance] [panel: parting-parameters]</li>
-<li><strong>Fixed</strong> Partings turning magenta once a head carried about 25 of them in Material Preview on some graphics cards. Every parting's warp now shares one image, so the count no longer runs into the limit. Run Repair Partings once to move partings already in a file over. [panel: header]</li>
-<li><strong>Fixed</strong> New partings tilting into the head on the crown, sides and back. The facing rotation was being worked out in reverse, and the surface weld drifted off the surface on non-square partings. [panel: placement-keys]</li>
-<li><strong>Fixed</strong> The key guide shown while placing partings now appears only in the viewport you started from. With a second 3D viewport open it was drawn in both, and cut off in the smaller one. [panel: placement-keys]</li>
-<li><strong>Fixed</strong> The head's own material is now kept when you save. Once a head had partings nothing else used it, so saving dropped it. Sync From Original, New Style, Delete Style and Reset Partings could then no longer find it. [panel: header]</li>
+<li>Live Bump switch, in its own block at the bottom of Appearance. Bump costs the most when Blender rebuilds the material, so it now starts off and placing partings stays quick. Bump Strength and Bump Distance show when it is on. The block reminds you which way to set it: "Turn on when baking partings" while off, "Turn off whilst placing partings" while on.</li>
+<li>Files saved before this version open with Live Bump matching how their partings were saved. If some had bump and some did not, it opens on.</li>
+<li>Freeze and Apply now warn you in their confirm box when the last bake had no Normal map.</li>
+<li>Parting Mask viewer. A thumbnail shows the mask new partings will use. Click it to pick from your masks. With no mask chosen, a line underneath says which image will be used.</li>
+<li>+ adds a mask from an image file. It is saved inside the .blend, so the file keeps working if the image moves.</li>
+<li>Arrows beside the viewer step through your masks.</li>
+<li>The bin takes the shown mask out of your mask list. Partings already using it keep it.</li>
+<li>Replace puts the shown mask on the ticked partings, or on the highlighted one when nothing is ticked. Position, shape and settings stay as they were, and linked mirrors follow. The button names what it will change. If Preview Mode is on it turns off so the new mask shows.</li>
+<li>Five bundled partings: Square Sharp Edge, Square Soft Edge, Triangle, Square 2x1 and Square Brick 2x2. Pick one from the menu beside + in the Parting Mask box. It is added and saved inside the .blend the same way as a mask you add with +.</li>
+<li>Edit Warp, in Parting Parameters. Drag the handles in the viewport to warp a parting. Enter confirms, and Esc or right-click puts the warp back as it was. The button stays pressed while that parting is being edited, and pressing it again also confirms.</li>
+<li>Lattice warps. Convert to Lattice turns a parting's corner warp into a 2 x 2 lattice without changing how it looks. P- and P+, Q- and Q+ change the rows and columns, from 2 to 8 each way. The warp is resampled to fit, so its shape can shift. Reset to Corners goes back to a corner warp.</li>
+<li>Soft Radius and Fold Guard, under the lattice controls. Soft Radius pulls nearby handles along with the one you drag; at 0 only that handle moves. Fold Guard stops a lattice warp folding back through itself, and higher values stop it sooner. While you hold a handle, scroll changes Soft Radius and Shift+scroll changes Fold Guard.</li>
+<li>Edit Warp has its own key guide in the viewport, in the same style as placing partings. Soft Radius and Fold Guard show with their values while you hold a handle. Fold Guard is listed on lattice partings only.</li>
+<li>You can keep using the sidebar during Edit Warp. A Soft Radius change applies from the next handle you grab. The lattice buttons are greyed out while that parting's warp is being edited, since they change the handles you are dragging.</li>
+<li>Mirror and Duplicate carry a parting's lattice warp. Linked mirrors follow lattice edits on their source live while you drag, and go back with it when you cancel.</li>
+<li>Empty Size, under Show All and Hide All. It sets how big every parting's Empty draws in the viewport, and new partings take the same size. Blender scales an Empty with its parting, so bigger partings still draw bigger Empties.</li>
+<li>Copy to Ticked. It copies the appearance settings of the parting you are editing onto the ticked partings only. With one parting ticked, the button names it.</li>
+<li>An info button left of the panel title. It shows the version, with links to the user guide and to help@ebonix.com.</li>
+</ul>
+<p><strong>CHANGED</strong></p>
+<ul>
+<li>Normal cannot be ticked in the Bake block while Live Bump is off, since there would be no bump to bake.</li>
+<li>New partings stick to the surface by position only, and the tool sets their facing rotation itself. They face straight out from the surface wherever they are placed, whatever their proportions.</li>
+<li>Moving a new parting with G turns it to face the surface at its new spot as you drag. Any twist you added with R stays.</li>
+<li>Duplicate gives the copy the same surface weld as its source, so a copy sits exactly the way its original does.</li>
+<li>Partings already placed are not changed. Files from earlier versions keep their old weld, and Repair Partings leaves it alone, so anything you have placed stays put.</li>
+<li>Linked mirrors still follow their source. Once unlinked, a mirror turns to face the surface the next time you move it.</li>
+<li>The mask list shows only masks: images added with +, and images your partings already use. Baked maps and other textures in the file no longer appear in it.</li>
+<li>Add Parting is now Place Parting, with a target icon. It is larger and has space around it.</li>
+<li>Style and Parting Mask each sit in their own box.</li>
+<li>Parting Parameters now runs Show Corner Markers, then the marker settings while markers are on. Edit Warp and the warp controls come next, with a gap between the two.</li>
+<li>Copy Settings to All is now Copy to All, and has moved from Parting Parameters to the Appearance block, beside Copy to Ticked. Both show while Link Appearance is off.</li>
+</ul>
+<p><strong>FIXED</strong></p>
+<ul>
+<li>Partings turning magenta once a head carried about 25 of them in Material Preview on some graphics cards. Every parting's warp now shares one image, so the count no longer runs into the limit. Run Repair Partings once to move partings already in a file over.</li>
+<li>New partings tilting into the head on the crown, sides and back. The facing rotation was being worked out in reverse, and the surface weld drifted off the surface on non-square partings.</li>
+<li>The key guide shown while placing partings now appears only in the viewport you started from. With a second 3D viewport open it was drawn in both, and cut off in the smaller one.</li>
+<li>The head's own material is now kept when you save. Once a head had partings nothing else used it, so saving dropped it. Sync From Original, New Style, Delete Style and Reset Partings could then no longer find it.</li>
 </ul>
 <h4 id="v1-3-1">V1.3.1<a class="headerlink" href="#v1-3-1" title="Permanent link">&para;</a></h4>
 <p>25 August 2026. Existing files open and work as before. Partings with strong corner warps can be refreshed to clear a doubled look — run Repair Partings once. Everything else is new list tools and small fixes.</p>
+<p><strong>ADDED</strong></p>
 <ul>
-<li><strong>Added</strong> Delete All button, on the parting list (the small trash icon under the per-row remove). Clears every parting on the head but KEEPS the material you have been tuning. Colour, bump, roughness and the rest carry over to the next parting you place. This is the difference from Reset Partings, which puts the head's plain skin material back. [panel: parting-list]</li>
-<li><strong>Added</strong> Tick boxes on the parting list, so you can pick several partings at once. Click a box to tick one, click more to add others in any order, or Shift-click to tick a whole run. [panel: parting-list]</li>
-<li><strong>Added</strong> Delete / Select / Clear buttons, shown above Show All / Hide All whenever something is ticked. Delete removes the ticked partings, Select grabs their Empties in the viewport so you can move them together, Clear unticks everything. [panel: parting-list]</li>
-<li><strong>Added</strong> Eye button on the ticked row, to the left of Delete. One press hides every ticked parting; press again to show them. If some ticked partings are hidden and some are showing, the press hides the lot rather than swapping them over. The eye always shows what the next press will do. [panel: parting-list]</li>
-<li><strong>Fixed</strong> A parting with strong corner warps could show a faint doubled or folded copy of itself. The corner warp is now baked to a small per-parting map and read from there. That removes the fold and lets a parting hold more than four corner points. Partings already in a file keep their current look until you run Repair Partings once, which rebuilds them. [panel: parting-parameters]</li>
-<li><strong>Fixed</strong> Mirror sync and live updates now keep working after you reopen a file. An internal handler was being cleared when a file opened. Mirrors stopped following their source, and on-screen changes stopped showing until the add-on was switched off and on. [panel: parting-list]</li>
-<li><strong>Fixed</strong> Select on the ticked list sometimes needed two presses to grab everything. It now grabs all ticked partings on the first press, wherever the list highlight happens to be. [panel: parting-list]</li>
-<li><strong>Fixed</strong> Hiding a parting with its own eye left its pending mirror still showing. A parting now hides and shows together with the mirror it created, which is how Hide All and Delete already treated them. [panel: parting-list]</li>
-<li><strong>Fixed</strong> An internal handler could be left running twice after the add-on was reloaded. Harmless in normal use, tidied up.</li>
+<li>Delete All button, on the parting list (the small trash icon under the per-row remove). Clears every parting on the head but KEEPS the material you have been tuning. Colour, bump, roughness and the rest carry over to the next parting you place. This is the difference from Reset Partings, which puts the head's plain skin material back.</li>
+<li>Tick boxes on the parting list, so you can pick several partings at once. Click a box to tick one, click more to add others in any order, or Shift-click to tick a whole run.</li>
+<li>Delete / Select / Clear buttons, shown above Show All / Hide All whenever something is ticked. Delete removes the ticked partings, Select grabs their Empties in the viewport so you can move them together, Clear unticks everything.</li>
+<li>Eye button on the ticked row, to the left of Delete. One press hides every ticked parting; press again to show them. If some ticked partings are hidden and some are showing, the press hides the lot rather than swapping them over. The eye always shows what the next press will do.</li>
+</ul>
+<p><strong>FIXED</strong></p>
+<ul>
+<li>A parting with strong corner warps could show a faint doubled or folded copy of itself. The corner warp is now baked to a small per-parting map and read from there. That removes the fold and lets a parting hold more than four corner points. Partings already in a file keep their current look until you run Repair Partings once, which rebuilds them.</li>
+<li>Mirror sync and live updates now keep working after you reopen a file. An internal handler was being cleared when a file opened. Mirrors stopped following their source, and on-screen changes stopped showing until the add-on was switched off and on.</li>
+<li>Select on the ticked list sometimes needed two presses to grab everything. It now grabs all ticked partings on the first press, wherever the list highlight happens to be.</li>
+<li>Hiding a parting with its own eye left its pending mirror still showing. A parting now hides and shows together with the mirror it created, which is how Hide All and Delete already treated them.</li>
+<li>An internal handler could be left running twice after the add-on was reloaded. Harmless in normal use, tidied up.</li>
 </ul>
 <h4 id="v1-3-0">V1.3.0<a class="headerlink" href="#v1-3-0" title="Permanent link">&para;</a></h4>
 <p>13 August 2026. If you have partings in an existing file, run Repair Partings once after updating.</p>
+<p><strong>ADDED</strong></p>
 <ul>
-<li><strong>Added</strong> Bake Samples, in the Bake block. Default is 16, as before. Raise it if partings bake with small holes in them. [panel: bake]</li>
-<li><strong>Added</strong> Normal Filtering, in the Bake block. Normal pass only. Leave it on Linear — Cubic measured slightly worse. [panel: bake]</li>
-<li><strong>Added</strong> Relationship Lines, in the panel header. [panel: header]</li>
-<li><strong>Added</strong> Bake Margin and Margin Type, in the Bake block. Margin is how far the bake is spread past each UV island edge, to hide seams. Defaults are unchanged from previous versions. [panel: bake]</li>
-<li><strong>Fixed</strong> The normal bake picked up the head's own surface detail, so the face showed through the baked normal map. Run Repair Partings once to update partings already in a file. [panel: bake]</li>
-<li><strong>Fixed</strong> Pressing Ctrl+Z after placing partings could crash Blender. One Ctrl+Z now undoes a whole placement session. Ctrl+Z during placement still removes one parting at a time. [panel: placement-keys]</li>
-<li><strong>Fixed</strong> Deleting a parting was far slower than it needed to be on a heavy head. On a 69-parting head the add-on's own work dropped from about 300ms to about 40ms. Blender still recompiles the material afterwards, so there is still a pause, but it is roughly half what it was. [panel: parting-list]</li>
-<li><strong>Fixed</strong> Preview Mode switches on more than twice as fast. [panel: preview]</li>
-<li><strong>Fixed</strong> Appearance changes and moving partings no longer rewrite values that are not changing. Link Appearance is now immediate rather than a visible pause. [panel: appearance]</li>
-<li><strong>Changed</strong> Preview Mode stays on when you finish placing, so what you just placed is still quick to adjust. Press Disable Preview for full shading. Saved with the file. [panel: preview]</li>
+<li>Bake Samples, in the Bake block. Default is 16, as before. Raise it if partings bake with small holes in them.</li>
+<li>Normal Filtering, in the Bake block. Normal pass only. Leave it on Linear — Cubic measured slightly worse.</li>
+<li>Relationship Lines, in the panel header.</li>
+<li>Bake Margin and Margin Type, in the Bake block. Margin is how far the bake is spread past each UV island edge, to hide seams. Defaults are unchanged from previous versions.</li>
+</ul>
+<p><strong>CHANGED</strong></p>
+<ul>
+<li>Preview Mode stays on when you finish placing, so what you just placed is still quick to adjust. Press Disable Preview for full shading. Saved with the file.</li>
+</ul>
+<p><strong>FIXED</strong></p>
+<ul>
+<li>The normal bake picked up the head's own surface detail, so the face showed through the baked normal map. Run Repair Partings once to update partings already in a file.</li>
+<li>Pressing Ctrl+Z after placing partings could crash Blender. One Ctrl+Z now undoes a whole placement session. Ctrl+Z during placement still removes one parting at a time.</li>
+<li>Deleting a parting was far slower than it needed to be on a heavy head. On a 69-parting head the add-on's own work dropped from about 300ms to about 40ms. Blender still recompiles the material afterwards, so there is still a pause, but it is roughly half what it was.</li>
+<li>Preview Mode switches on more than twice as fast.</li>
+<li>Appearance changes and moving partings no longer rewrite values that are not changing. Link Appearance is now immediate rather than a visible pause.</li>
 </ul>
 <h4 id="v1-2-0">V1.2.0<a class="headerlink" href="#v1-2-0" title="Permanent link">&para;</a></h4>
 <p>11 August 2026.</p>
+<p><strong>ADDED</strong></p>
 <ul>
-<li><strong>Added</strong> The key guide is now drawn in the viewport rather than squeezed into one line, with the values that change as you work. It falls back to the header line if it cannot draw. [panel: placement-keys]</li>
-<li><strong>Added</strong> Styles can be renamed, with the pencil beside a style. The first style on a head is now called "Style 1" from creation. [panel: target]</li>
-<li><strong>Fixed</strong> The appearance sliders on an individual parting now stop at the same limits as the shared ones. Run Repair once for partings already in a file. A value past a new limit is brought back to it, so check anything you pushed far. [panel: appearance]</li>
-<li><strong>Changed</strong> The Appearance block no longer moves when you turn Link Appearance on and off, and Link Appearance has moved into that block's heading. [panel: appearance]</li>
-<li><strong>Changed</strong> Sidebar reordered: Add Parting, Preview, the parting list, Appearance, Parting Parameters, Bake. Show All and Hide All sit under the list, and Sync From Original is an icon at the top. The commands have dropped "Scalp" from their names. [panel: header]</li>
-<li><strong>Changed</strong> Depth removed from the sidebar and fixed at 0.5. Partings already placed keep their value. [panel: appearance]</li>
-<li><strong>Changed</strong> Defaults retuned for a fresh parting on a new material: lighter Hair Color, neutral Detail, both Roughness settings at 0.5, Opacity capped at 100. [panel: appearance]</li>
-<li><strong>Changed</strong> Universal Mirror removed from the sidebar. Placing always starts unmirrored and M turns mirroring on as it always did. [panel: placement-keys]</li>
+<li>The key guide is now drawn in the viewport rather than squeezed into one line, with the values that change as you work. It falls back to the header line if it cannot draw.</li>
+<li>Styles can be renamed, with the pencil beside a style. The first style on a head is now called "Style 1" from creation.</li>
+</ul>
+<p><strong>CHANGED</strong></p>
+<ul>
+<li>The Appearance block no longer moves when you turn Link Appearance on and off, and Link Appearance has moved into that block's heading.</li>
+<li>Sidebar reordered: Add Parting, Preview, the parting list, Appearance, Parting Parameters, Bake. Show All and Hide All sit under the list, and Sync From Original is an icon at the top. The commands have dropped "Scalp" from their names.</li>
+<li>Depth removed from the sidebar and fixed at 0.5. Partings already placed keep their value.</li>
+<li>Defaults retuned for a fresh parting on a new material: lighter Hair Color, neutral Detail, both Roughness settings at 0.5, Opacity capped at 100.</li>
+<li>Universal Mirror removed from the sidebar. Placing always starts unmirrored and M turns mirroring on as it always did.</li>
+</ul>
+<p><strong>FIXED</strong></p>
+<ul>
+<li>The appearance sliders on an individual parting now stop at the same limits as the shared ones. Run Repair once for partings already in a file. A value past a new limit is brought back to it, so check anything you pushed far.</li>
 </ul>
 <h4 id="v1-1-1">V1.1.1<a class="headerlink" href="#v1-1-1" title="Permanent link">&para;</a></h4>
 <p>11 August 2026.</p>
+<p><strong>CHANGED</strong></p>
 <ul>
-<li><strong>Fixed</strong> A new parting no longer comes out the wrong size on heads that are not roughly life-sized. Size is now worked out from your target's own dimensions. Partings already placed are untouched. [panel: placement-keys]</li>
-<li><strong>Fixed</strong> Freezing a layer no longer resets the appearance of the next parting you place. Those settings are now kept with the material and survive any number of freezes. [panel: bake]</li>
-<li><strong>Changed</strong> Scale carries from one parting session to the next, as a proportion of the head. Rotation still starts fresh. [panel: placement-keys]</li>
-<li><strong>Changed</strong> The Stamp Size slider has been removed. It had no effect on anything — resize with S while placing instead. [panel: placement-keys]</li>
+<li>Scale carries from one parting session to the next, as a proportion of the head. Rotation still starts fresh.</li>
+<li>The Stamp Size slider has been removed. It had no effect on anything — resize with S while placing instead.</li>
+</ul>
+<p><strong>FIXED</strong></p>
+<ul>
+<li>A new parting no longer comes out the wrong size on heads that are not roughly life-sized. Size is now worked out from your target's own dimensions. Partings already placed are untouched.</li>
+<li>Freezing a layer no longer resets the appearance of the next parting you place. Those settings are now kept with the material and survive any number of freezes.</li>
 </ul>
 <h4 id="v1-1-0">V1.1.0<a class="headerlink" href="#v1-1-0" title="Permanent link">&para;</a></h4>
 <p>10 August 2026.</p>
+<p><strong>ADDED</strong></p>
 <ul>
-<li><strong>Fixed</strong> Baked maps no longer come out with dark speckles and short dashes through the body of every parting. Baking now takes noticeably longer; that is the fix, not a regression. Maps baked with an earlier version keep the speckles — re-bake. [panel: bake]</li>
-<li><strong>Fixed</strong> Save Textures (Transparent) was writing colour that was too bright, with the sRGB curve applied twice. Re-export to correct earlier files and drop any correction you added. [panel: save]</li>
-<li><strong>Fixed</strong> Freezing a layer and then baking more than once no longer loses the frozen partings from the Alpha coverage map. Coverage already lost cannot be recovered. [panel: bake]</li>
-<li><strong>Added</strong> The transparent export takes its colour from a pass baked over black. A parting's soft edge carries its own colour rather than the skin beneath it. Materials baked with an earlier version fall back until you bake once more. [panel: save]</li>
+<li>The transparent export takes its colour from a pass baked over black. A parting's soft edge carries its own colour rather than the skin beneath it. Materials baked with an earlier version fall back until you bake once more.</li>
+</ul>
+<p><strong>FIXED</strong></p>
+<ul>
+<li>Baked maps no longer come out with dark speckles and short dashes through the body of every parting. Baking now takes noticeably longer; that is the fix, not a regression. Maps baked with an earlier version keep the speckles — re-bake.</li>
+<li>Save Textures (Transparent) was writing colour that was too bright, with the sRGB curve applied twice. Re-export to correct earlier files and drop any correction you added.</li>
+<li>Freezing a layer and then baking more than once no longer loses the frozen partings from the Alpha coverage map. Coverage already lost cannot be recovered.</li>
 </ul>
 <h4 id="v1-0-3">V1.0.3<a class="headerlink" href="#v1-0-3" title="Permanent link">&para;</a></h4>
 <p>9 August 2026.</p>
+<p><strong>ADDED</strong></p>
 <ul>
-<li><strong>Fixed</strong> Baking again after Freeze Layer no longer discards the frozen coverage map. Coverage already lost cannot be recovered. [panel: bake]</li>
-<li><strong>Fixed</strong> Baked maps are now kept per style, so baking one style no longer reaches into another's maps. Ghost partings came from this. Existing maps migrate on the next bake. [panel: bake]</li>
-<li><strong>Fixed</strong> The Alpha coverage map now reflects what is actually live, so a parting you delete no longer stays on it permanently. [panel: bake]</li>
-<li><strong>Fixed</strong> Changing Bake Resolution no longer leaves the previous resolution's maps showing, and coverage carries across. [panel: bake]</li>
-<li><strong>Fixed</strong> Baked maps shared between two materials are no longer deleted by a bake on the other one. [panel: bake]</li>
-<li><strong>Fixed</strong> The transparent export no longer has a pale rim around every parting. [panel: save]</li>
-<li><strong>Fixed</strong> Bake Partings refuses to run while Preview Mode is on instead of producing a corrupted result. [panel: bake]</li>
-<li><strong>Fixed</strong> Partings hidden with the eye toggle are genuinely left out of bakes and previews. [panel: parting-list]</li>
-<li><strong>Fixed</strong> While placing, S no longer does nothing when X, Y or R is already active. S releases any constraint and R cancels sizing. Press X or Y after S to constrain to one axis. [panel: placement-keys]</li>
-<li><strong>Added</strong> Global Appearance, Parting Parameters and Bake are collapsible, and the state is saved with your .blend. A collapsed Bake section hides its warnings too. [panel: appearance]</li>
-<li><strong>Changed</strong> The partings list keeps its search and sort row open. [panel: parting-list]</li>
-<li><strong>Changed</strong> The active parting's panel tidied: the raw Size X/Y/Z fields are gone, and the Corner rows show X and Y only. [panel: parting-parameters]</li>
+<li>Global Appearance, Parting Parameters and Bake are collapsible, and the state is saved with your .blend. A collapsed Bake section hides its warnings too.</li>
+</ul>
+<p><strong>CHANGED</strong></p>
+<ul>
+<li>The partings list keeps its search and sort row open.</li>
+<li>The active parting's panel tidied: the raw Size X/Y/Z fields are gone, and the Corner rows show X and Y only.</li>
+</ul>
+<p><strong>FIXED</strong></p>
+<ul>
+<li>Baking again after Freeze Layer no longer discards the frozen coverage map. Coverage already lost cannot be recovered.</li>
+<li>Baked maps are now kept per style, so baking one style no longer reaches into another's maps. Ghost partings came from this. Existing maps migrate on the next bake.</li>
+<li>The Alpha coverage map now reflects what is actually live, so a parting you delete no longer stays on it permanently.</li>
+<li>Changing Bake Resolution no longer leaves the previous resolution's maps showing, and coverage carries across.</li>
+<li>Baked maps shared between two materials are no longer deleted by a bake on the other one.</li>
+<li>The transparent export no longer has a pale rim around every parting.</li>
+<li>Bake Partings refuses to run while Preview Mode is on instead of producing a corrupted result.</li>
+<li>Partings hidden with the eye toggle are genuinely left out of bakes and previews.</li>
+<li>While placing, S no longer does nothing when X, Y or R is already active. S releases any constraint and R cancels sizing. Press X or Y after S to constrain to one axis.</li>
 </ul>
 <h4 id="v1-0-2">V1.0.2<a class="headerlink" href="#v1-0-2" title="Permanent link">&para;</a></h4>
 <p>6 August 2026.</p>
+<p><strong>ADDED</strong></p>
 <ul>
-<li><strong>Added</strong> Alpha channel in the bake options, producing a coverage map. Off by default — needed only for the transparent export. [panel: bake]</li>
-<li><strong>Added</strong> Save Textures. Writes the baked maps to a folder as PNGs. [panel: save]</li>
-<li><strong>Added</strong> Save Textures (Transparent). A single RGBA PNG, your parting colour with the coverage map as its alpha. Needs both Colour and Alpha baked, and uses this mesh's UV layout. [panel: save]</li>
-<li><strong>Added</strong> Bit depth and Premultiplied Alpha options for the transparent export. 8-bit and straight alpha are right for almost everything; turn Premultiplied on only if your engine asks. [panel: save]</li>
-<li><strong>Changed</strong> Bake Partings and Apply Bake share one row, with the save buttons underneath once something has been baked. [panel: bake]</li>
-<li><strong>Fixed</strong> Styles could load into the wrong material slot and appear to vanish. Existing styles carry no slot record — put the style material in the right slot by hand once and click the style. [panel: target]</li>
-<li><strong>Fixed</strong> The material slot a partings material occupies is now shown in the panel next to its name. [panel: target]</li>
-<li><strong>Fixed</strong> Repair no longer discards its own backfill message when it also resets emission during crash recovery. [panel: header]</li>
+<li>Alpha channel in the bake options, producing a coverage map. Off by default — needed only for the transparent export.</li>
+<li>Save Textures. Writes the baked maps to a folder as PNGs.</li>
+<li>Save Textures (Transparent). A single RGBA PNG, your parting colour with the coverage map as its alpha. Needs both Colour and Alpha baked, and uses this mesh's UV layout.</li>
+<li>Bit depth and Premultiplied Alpha options for the transparent export. 8-bit and straight alpha are right for almost everything; turn Premultiplied on only if your engine asks.</li>
+</ul>
+<p><strong>CHANGED</strong></p>
+<ul>
+<li>Bake Partings and Apply Bake share one row, with the save buttons underneath once something has been baked.</li>
+</ul>
+<p><strong>FIXED</strong></p>
+<ul>
+<li>Styles could load into the wrong material slot and appear to vanish. Existing styles carry no slot record — put the style material in the right slot by hand once and click the style.</li>
+<li>The material slot a partings material occupies is now shown in the panel next to its name.</li>
+<li>Repair no longer discards its own backfill message when it also resets emission during crash recovery.</li>
 </ul>
 <h4 id="v1-0-1">V1.0.1<a class="headerlink" href="#v1-0-1" title="Permanent link">&para;</a></h4>
 <p>6 August 2026.</p>
+<p><strong>FIXED</strong></p>
 <ul>
-<li><strong>Fixed</strong> Partings could be lost when a material was used on more than one slot. Orphaned partings are now warned about rather than silently deleted. Discard Orphan Stamps added. [panel: orphan-stamps]</li>
+<li>Partings could be lost when a material was used on more than one slot. Orphaned partings are now warned about rather than silently deleted. Discard Orphan Stamps added.</li>
 </ul>
 <h4 id="v1-0-0">V1.0.0<a class="headerlink" href="#v1-0-0" title="Permanent link">&para;</a></h4>
 <p>First release.</p>
