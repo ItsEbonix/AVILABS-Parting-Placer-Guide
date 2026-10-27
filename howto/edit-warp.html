@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>Shape A Parting With Edit Warp - Parting Placer Guide</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+        <link href="../css/extra.css" rel="stylesheet" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Shape A Parting With Edit Warp";
+        var mkdocs_page_input_path = "howto/edit-warp.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../index.html" class="icon icon-home"> Parting Placer Guide
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../index.html">Welcome</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../requirements.html">Requirements And Compatibility</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../install.html">Install, Update, Uninstall</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Getting Started</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../quickstart.html">Your First Parting In 10 Minutes</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Main Concepts</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../concepts/how-a-parting-works.html">How A Parting Is Built</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../concepts/live-preview-frozen.html">Live, Preview And Frozen Partings</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../concepts/what-baking-produces.html">What Baking Produces</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../concepts/alpha.html">Straight Vs Premultiplied Alpha</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../concepts/styles.html">Styles</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">How-To</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="place-partings.html">Place Partings</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="mirror-partings.html">Mirror Partings</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="several-at-once.html">Work On Several Partings At Once</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">Shape A Parting With Edit Warp</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#steps">Bend The Corners</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#lattice">Add More Handles With A Lattice</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#soft-radius">Control How Far A Drag Spreads</a>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="match-appearance.html">Make Every Parting Match</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="viewport-speed.html">Keep The Viewport Fast</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="mirror-modifier.html">Work On A Head With A Mirror Modifier</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="bake-and-save.html">Bake And Save Textures</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="transparent-export.html">Export A Transparent Overlay</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="styles.html">Save And Switch Parting Styles</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="repair-reset.html">Repair Or Reset A Head</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Panel Reference</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../reference/header.html">Panel Header</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../reference/target.html">Target And Styles</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../reference/placement-keys.html">Place Parting And Placement Keys</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../reference/preview.html">Preview</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../reference/parting-list.html">Parting List</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../reference/appearance.html">Appearance</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../reference/parting-parameters.html">Parting Parameters</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../reference/bake.html">Bake</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../reference/save.html">Saving Textures</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../reference/orphan-stamps.html">Orphan Stamps Warning</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Help</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../help/troubleshooting.html">Troubleshooting</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../help/glossary.html">Glossary</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../help/changelog.html">Changelog</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Parting Placer Guide</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../index.html" class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">How-To</li>
+      <li class="breadcrumb-item active">Shape A Parting With Edit Warp</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h2 id="shape-a-parting-with-edit-warp">Shape A Parting With Edit Warp<a class="headerlink" href="#shape-a-parting-with-edit-warp" title="Permanent link">&para;</a></h2>
+<p><strong>Applies to:</strong> Parting Placer V2.0.0 · Blender 4.4 · 5.2</p>
+<p>Bend a parting so it follows the head, for example along a hairline, by dragging handles in the viewport.</p>
+<div class="admonition info">
+<p class="admonition-title">You Need First</p>
+<ul>
+<li><a href="place-partings.html">Place Partings</a></li>
+<li>The <strong>Parting Parameters</strong> box. It shows while a parting is picked. See <a href="../reference/parting-parameters.html">Parting Parameters</a>.</li>
+</ul>
+</div>
+<figure class="spp-media spp-video"><video controls muted playsinline preload="metadata"><source src="../video/spp-edit-warp-00-overview-v200.mp4" type="video/mp4">Your browser cannot play this clip. <a class="spp-steps-link" href="#steps">Read the steps as text</a>.</video><figcaption>Bending a parting&#x27;s corners, then turning it into a lattice for more handles <a class="spp-steps-link" href="#steps">Read the steps as text</a></figcaption></figure>
+
+<h4 id="steps">Bend The Corners<a class="headerlink" href="#steps" title="Permanent link">&para;</a></h4>
+<ol>
+<li>In the parting list, select the parting you want to shape.</li>
+<li>In <strong>Parting Parameters</strong>, select <strong>Edit Warp</strong>. Four handles appear on the parting.</li>
+<li>Drag a handle with the left mouse button.</li>
+<li>Press <strong>Enter</strong> to keep the shape.</li>
+</ol>
+<p>To cancel instead, press <strong>Esc</strong> or right-click. The parting goes back to how it was before you selected <strong>Edit Warp</strong>.</p>
+<p>The middle mouse button still orbits the view while you edit. A key guide in the viewport lists the keys.</p>
+<h4 id="lattice">Add More Handles With A Lattice<a class="headerlink" href="#lattice" title="Permanent link">&para;</a></h4>
+<p>Four handles can't follow every curve. A lattice gives the parting a grid of handles instead.</p>
+<ol>
+<li>Check <strong>Edit Warp</strong> is not pressed. If it is, press <strong>Enter</strong> first.</li>
+<li>Select <strong>Convert To Lattice</strong>. The parting keeps its shape and gets a 2 x 2 lattice.</li>
+<li>Select <strong>P+</strong> to add a column of handles.</li>
+<li>Select <strong>Q+</strong> to add a row. The size shows underneath, for example <strong>Lattice 4 x 4</strong>.</li>
+<li>Select <strong>Edit Warp</strong>.</li>
+<li>Drag the handles to the shape you want.</li>
+<li>Press <strong>Enter</strong> to keep the shape.</li>
+</ol>
+<figure class="spp-media spp-video"><video controls muted playsinline preload="metadata"><source src="../video/spp-edit-warp-lattice-03-fit-hairline-v200.mp4" type="video/mp4">Your browser cannot play this clip. <a class="spp-steps-link" href="#lattice">Read the steps as text</a>.</video><figcaption>Shaping a 4 x 4 lattice along the hairline <a class="spp-steps-link" href="#lattice">Read the steps as text</a></figcaption></figure>
+
+<p>Set the number of rows and columns before you start shaping. Changing the size later can shift the shape.</p>
+<p>Each side goes up to 8 handles.</p>
+<h4 id="soft-radius">Control How Far A Drag Spreads<a class="headerlink" href="#soft-radius" title="Permanent link">&para;</a></h4>
+<p>While you hold a handle, scroll to change <strong>Soft Radius</strong>. It sets how far a drag pulls the nearby handles along. At <strong>0</strong> only the handle you hold moves.</p>
+<p>On a lattice, <strong>Fold Guard</strong> stops the warp folding back through itself. Hold <strong>Shift</strong> and scroll to change it.</p>
+<p>To go back to a plain corner warp, select <strong>Reset To Corners</strong>. The lattice shape is not kept.</p>
+
+
+<div class="admonition stuck">
+<p class="admonition-title">If You're Stuck</p>
+<ul>
+<li><strong>Convert To Lattice</strong> or <strong>P+</strong> is greyed out? Press <strong>Enter</strong> to finish the edit first.</li>
+<li>A parting looks doubled or folded? See <a href="../help/troubleshooting.html#parting-looks-doubled">A Parting Looks Doubled Or Folded</a>.</li>
+<li>Every control in detail: <a href="../reference/parting-parameters.html#edit-warp">Edit Warp</a>.</li>
+</ul>
+</div>
+<p><strong>Recommended next:</strong> <a href="match-appearance.html">Make Every Parting Match</a></p>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="several-at-once.html" class="btn btn-neutral float-left" title="Work On Several Partings At Once"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="match-appearance.html" class="btn btn-neutral float-right" title="Make Every Parting Match">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    
+      <p>Parting Placer Tool · AVILABS by Ebonix</p>
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="several-at-once.html" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="match-appearance.html" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "..";</script>
+    <script src="../js/theme_extra.js"></script>
+    <script src="../js/theme.js"></script>
+      <script src="../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

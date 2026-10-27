@@ -76,6 +76,8 @@
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="several-at-once.html">Work On Several Partings At Once</a>
                   </li>
+                  <li class="toctree-l1"><a class="reference internal" href="edit-warp.html">Shape A Parting With Edit Warp</a>
+                  </li>
                   <li class="toctree-l1"><a class="reference internal" href="match-appearance.html">Make Every Parting Match</a>
                   </li>
                   <li class="toctree-l1 current"><a class="reference internal current" href="#">Keep The Viewport Fast</a>
@@ -168,6 +170,10 @@
 <h4 id="steps">Steps<a class="headerlink" href="#steps" title="Permanent link">&para;</a></h4>
 <ol>
 <li>Select <strong>Enable Preview</strong> in the <strong>Preview</strong> box. The viewport switches to a low-resolution stand-in.</li>
+</ol>
+<figure class="spp-media spp-figure"><img src="../img/spp-viewport-speed-01-preview-on-v200.png" alt="Head with three partings beside the panel, where the Preview box reads Disable Preview and Preview, 3 stamps cached at 1024px" loading="lazy"><figcaption>[1] Preview on: the button now reads Disable Preview</figcaption></figure>
+
+<ol start="2">
 <li>Keep placing and editing. New partings stay live on top of the stand-in.</li>
 <li>Select <strong>Disable Preview</strong> when you want full shading again.</li>
 </ol>
@@ -180,13 +186,19 @@
 <li>Select <strong>Freeze Layer</strong>.</li>
 </ol>
 <p>The frozen partings stay in your maps, and you carry on with a clean slate. You can freeze 3 times per material.</p>
+<figure class="spp-media spp-figure"><img src="../img/spp-viewport-speed-freeze-04-clean-slate-v200.png" alt="Head still showing three partings, while the panel reads No partings on this object yet under Place Parting" loading="lazy"><figcaption>[2] After a freeze: the partings are in the maps and the panel starts fresh</figcaption></figure>
+
 <h4 id="other">Other Things That Help<a class="headerlink" href="#other" title="Permanent link">&para;</a></h4>
 <ul>
 <li>Leave <strong>Live Bump</strong> off while you place. Bump is the slowest part of the material for Blender to rebuild.</li>
 <li>Close the <strong>Shader Editor</strong> while you work. An open node editor makes Blender redo the material as you go.</li>
 <li>Select the <strong>Relationship Lines</strong> icon in the panel header to hide the dashed lines from each Empty.</li>
 </ul>
+<figure class="spp-media spp-figure"><img src="../img/spp-viewport-speed-other-03-relationship-lines-v200.png" alt="Two views of the same head and panel. On the left, dashed lines run down from the partings&#x27; Empties; on the right they are gone" loading="lazy"><figcaption>[3] Relationship Lines on (left) and off (right)</figcaption></figure>
+
 <p><strong>Bake Partings</strong> on its own does not speed anything up. Your partings stay live after a bake.</p>
+
+
 
 
 <div class="admonition stuck">
