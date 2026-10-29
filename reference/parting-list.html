@@ -135,6 +135,8 @@
     </li>
     <li class="toctree-l2"><a class="reference internal" href="#ticked-eye">Eye (Ticked Row)</a>
     </li>
+    <li class="toctree-l2"><a class="reference internal" href="#mirror-ticked">Mirror (Ticked Row)</a>
+    </li>
     <li class="toctree-l2"><a class="reference internal" href="#delete-ticked">Delete</a>
     </li>
     <li class="toctree-l2"><a class="reference internal" href="#select-ticked">Select</a>
@@ -143,7 +145,7 @@
     </li>
     <li class="toctree-l2"><a class="reference internal" href="#show-hide-all">Show All / Hide All</a>
     </li>
-    <li class="toctree-l2"><a class="reference internal" href="#empty-size">Empty Size</a>
+    <li class="toctree-l2"><a class="reference internal" href="#select-all">Select All</a>
     </li>
     </ul>
                   </li>
@@ -198,29 +200,38 @@
 <p>Every parting you place shows up in this list. From here you pick, hide, copy, mirror, reorder and remove them.</p>
 
 
-<figure class="spp-media spp-figure"><img src="../img/spp-parting-list-01-list-v200.png" alt="Applied Partings list with Pending Mirrors: 3 and Confirm All (3), a column of buttons on its right, a 1 ticked row with Delete, Select and Clear, then Show All, Hide All and Empty Size underneath" loading="lazy"><figcaption>[1] The parting list with one parting ticked</figcaption></figure>
+<figure class="spp-media spp-figure"><img src="../img/spp-parting-list-01-list-v200.png" alt="Applied Partings section with Pending Mirrors: 14 and its tick and X icons, a red warning to confirm or deactivate pending mirrors, the list with Parting 001 and Parting 002 ticked and a column of buttons on its right, a 3 ticked row of icons, then Show All, Hide All and Select All" loading="lazy"><figcaption>[1] The parting list with three partings ticked</figcaption></figure>
+
+
 
 
 
 
 
 <h4 id="applied-partings">Applied Partings<a class="headerlink" href="#applied-partings" title="Permanent link">&para;</a></h4>
-<p>The heading counts your partings, for example <strong>Applied Partings (2)</strong>. New partings are named <strong>Parting 001</strong>, <strong>Parting 002</strong> and so on.</p>
+<p>The <strong>Applied Partings</strong> heading sits at the top of the list. Select the arrow beside it to fold the list away, or to open it again.</p>
+<p>Folded, the heading shows how many mirrors are pending. The count turns red above five.</p>
+<p>New partings are named <strong>Parting 001</strong>, <strong>Parting 002</strong> and so on.</p>
+
+
 
 
 
 
 <h4 id="pending-mirrors">Pending Mirrors<a class="headerlink" href="#pending-mirrors" title="Permanent link">&para;</a></h4>
-<p>A mirror starts out pending, so you can see it before you keep it. While any are pending, a line under the heading counts them, for example <strong>Pending Mirrors: 2</strong>.</p>
+<p>A mirror starts out pending, so you can see it before you keep it. While any are pending, a line under the heading counts them, for example <strong>Pending Mirrors: 2</strong>. Its tick and X icons are <strong>Confirm All</strong> and <strong>Deactivate All</strong>.</p>
+
+
 <p>With more than five pending, a warning appears: <strong>Confirm or deactivate pending mirrors</strong>.</p>
 
 
 <h4 id="confirm-all">Confirm All<a class="headerlink" href="#confirm-all" title="Permanent link">&para;</a></h4>
-<p>Keeps every pending mirror as a parting of its own. The button shows how many, for example <strong>Confirm All (2)</strong>. The README calls it <strong>Confirm All Pending</strong>.</p>
+<p>The tick at the end of the <strong>Pending Mirrors</strong> line. It keeps every pending mirror as a parting of its own. The README calls it <strong>Confirm All Pending</strong>.</p>
+<p>Its tooltip reads: <strong>Promote every pending mirror in this material to a standalone parting</strong></p>
 
 
 <h4 id="deactivate-all">Deactivate All<a class="headerlink" href="#deactivate-all" title="Permanent link">&para;</a></h4>
-<p>Throws away every pending mirror. The README calls it <strong>Deactivate All Pending</strong>.</p>
+<p>The X at the end of the <strong>Pending Mirrors</strong> line. It throws away every pending mirror. The README calls it <strong>Deactivate All Pending</strong>.</p>
 <p>Blender asks you to confirm first.</p>
 
 
@@ -312,20 +323,31 @@
 
 
 <h4 id="ticked-eye">Eye (Ticked Row)<a class="headerlink" href="#ticked-eye" title="Permanent link">&para;</a></h4>
-<p>Once you tick a parting, a row appears above <strong>Show All / Hide All</strong>. It starts with a count, for example <strong>2 ticked</strong>.</p>
+<p>Once you tick a parting, a row of icons appears in its own box under the list. It starts with a count, for example <strong>2 ticked</strong>. Hover an icon to see what it does.</p>
+
+
 <p>Its eye hides the ticked partings, or shows them again. If some are hidden and some showing, it hides all of them. The icon always shows what the next press will do.</p>
 
 
+<h4 id="mirror-ticked">Mirror (Ticked Row)<a class="headerlink" href="#mirror-ticked" title="Permanent link">&para;</a></h4>
+<p>The mirror icon, second in the row. It makes a pending mirror for each ticked parting.</p>
+<p>Partings that already have a pending mirror, and mirrors you have already confirmed, are skipped. That way two mirrors never land in the same spot. The status bar says how many were made and how many were skipped.</p>
+<p>Its tooltip reads: <strong>Create a pending mirror for every ticked parting</strong></p>
+
+
 <h4 id="delete-ticked">Delete<a class="headerlink" href="#delete-ticked" title="Permanent link">&para;</a></h4>
-<p>Removes every ticked parting.</p>
+<p>The trash can in the row. It removes every ticked parting.</p>
+<p>Blender asks first, for example <strong>Delete 2 ticked parting(s)?</strong> with a <strong>Delete</strong> button. If pending mirrors go with them, it adds how many, for example <strong>Also removes 2 pending mirror(s).</strong></p>
+
+
 
 
 <h4 id="select-ticked">Select<a class="headerlink" href="#select-ticked" title="Permanent link">&para;</a></h4>
-<p>Selects the ticked partings' Empties in the viewport, so you can move them together. Hidden partings are skipped, and the status bar says how many.</p>
+<p>The cursor icon. It selects the ticked partings' Empties in the viewport, so you can move them together. Hidden partings are skipped, and the status bar says how many.</p>
 
 
 <h4 id="clear-ticks">Clear<a class="headerlink" href="#clear-ticks" title="Permanent link">&para;</a></h4>
-<p>Unticks everything.</p>
+<p>The X at the end of the row. It unticks everything.</p>
 
 
 <h4 id="show-hide-all">Show All / Hide All<a class="headerlink" href="#show-hide-all" title="Permanent link">&para;</a></h4>
@@ -334,18 +356,9 @@
 
 
 
-<h4 id="empty-size">Empty Size<a class="headerlink" href="#empty-size" title="Permanent link">&para;</a></h4>
-<p>The slider under <strong>Show All / Hide All</strong>. It sets how big every parting's Empty draws in the viewport. The default is <strong>0.15</strong>.</p>
-<p>Its tooltip reads: <strong>Display size of every parting Empty in the active style. Blender multiplies it by each Empty's scale, so bigger partings draw bigger axes</strong></p>
-<p>Dragging it resizes the Empties of every parting in the active style, including any you sized by hand. Partings in parked styles keep their size.</p>
-<p>New partings are placed at the slider's size.</p>
-<p>The slider does not read sizes back from your Empties. It shows its own value until you drag it.</p>
-
-
-
-
-
-
+<h4 id="select-all">Select All<a class="headerlink" href="#select-all" title="Permanent link">&para;</a></h4>
+<p>The button beside <strong>Show All</strong> and <strong>Hide All</strong>. It ticks every parting in the list.</p>
+<p>Its tooltip reads: <strong>Tick every parting in the list</strong></p>
 
 
 <div class="admonition stuck">

@@ -195,9 +195,13 @@
 <li>Edit Warp has its own key guide in the viewport, in the same style as placing partings. Soft Radius and Fold Guard show with their values while you hold a handle. Fold Guard is listed on lattice partings only.</li>
 <li>You can keep using the sidebar during Edit Warp. A Soft Radius change applies from the next handle you grab. The lattice buttons are greyed out while that parting's warp is being edited, since they change the handles you are dragging.</li>
 <li>Mirror and Duplicate carry a parting's lattice warp. Linked mirrors follow lattice edits on their source live while you drag, and go back with it when you cancel.</li>
-<li>Empty Size, under Show All and Hide All. It sets how big every parting's Empty draws in the viewport, and new partings take the same size. Blender scales an Empty with its parting, so bigger partings still draw bigger Empties.</li>
+<li>Empty Size, in the gear menu at the top right of the panel. It sets how big every parting's Empty draws in the viewport, and new partings take the same size. Blender scales an Empty with its parting, so bigger partings still draw bigger Empties.</li>
 <li>Copy to Ticked. It copies the appearance settings of the parting you are editing onto the ticked partings only. With one parting ticked, the button names it.</li>
 <li>An info button left of the panel title. It shows the version, with links to the user guide and to help@ebonix.com.</li>
+<li>Select All, beside Show All and Hide All, ticks every parting in the list.</li>
+<li>Mirror on the selection row makes a pending mirror for each ticked parting. Partings that already have a pending mirror, and mirrors you have already confirmed, are skipped, so two mirrors never land in the same spot.</li>
+<li>Delete on the selection row now asks first, and says how many pending mirrors go with the ticked partings.</li>
+<li>Style, Parting Mask, Preview Mode and Applied Partings fold with the arrow beside their name, the same as the other sections.</li>
 </ul>
 <p><strong>CHANGED</strong></p>
 <ul>
@@ -212,6 +216,12 @@
 <li>Style and Parting Mask each sit in their own box.</li>
 <li>Parting Parameters now runs Show Corner Markers, then the marker settings while markers are on. Edit Warp and the warp controls come next, with a gap between the two.</li>
 <li>Copy Settings to All is now Copy to All, and has moved from Parting Parameters to the Appearance block, beside Copy to Ticked. Both show while Link Appearance is off.</li>
+<li>Auto Preview now starts off. Turn it on in the Preview Mode box when you place many partings in one go.</li>
+<li>Marker Lift now starts at 0, so the corner labels and the Edit Warp handles sit on the scalp. Files keep the value they were saved with.</li>
+<li>The selection row shows the count and icons only, in its own box under the list. Hover an icon to see what it does.</li>
+<li>Applied Partings is its own section. Pending Mirrors sits on one line inside it, with Confirm All and Deactivate All as icons. Folded, its header shows the waiting mirror count, in red above 5.</li>
+<li>Every section heading has an icon and is a little taller. The gaps between sections are all the same size.</li>
+<li>Sync From Original, Relationship Lines, Repair Partings and Reset Partings moved into the gear menu at the top right of the panel.</li>
 </ul>
 <p><strong>FIXED</strong></p>
 <ul>

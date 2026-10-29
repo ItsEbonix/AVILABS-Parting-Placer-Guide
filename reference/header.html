@@ -99,9 +99,13 @@
     <ul class="current">
     <li class="toctree-l2"><a class="reference internal" href="#info-button">Info Button</a>
     </li>
+    <li class="toctree-l2"><a class="reference internal" href="#gear-menu">Gear Menu</a>
+    </li>
     <li class="toctree-l2"><a class="reference internal" href="#sync-from-original">Sync From Original</a>
     </li>
     <li class="toctree-l2"><a class="reference internal" href="#relationship-lines">Relationship Lines</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#empty-size">Empty Size</a>
     </li>
     <li class="toctree-l2"><a class="reference internal" href="#repair-partings">Repair Partings</a>
     </li>
@@ -165,8 +169,10 @@
 <p><strong>Applies to:</strong> Parting Placer V2.0.0 · Blender 4.4 · 5.2</p>
 
 
-<p>The <strong>i</strong> at the left of the <strong>Parting Placer Tool</strong> panel title opens the add-on's info. Four small icons sit at the right end of the title. This page covers each one, left to right.</p>
-<figure class="spp-media spp-figure"><img src="../img/spp-header-01-icons-v200.png" alt="Parting Placer Tool panel title with an i button before the title and four small icons at its right end" loading="lazy"><figcaption>[1] The panel title with the i on the left and the four icons on the right</figcaption></figure>
+<p>The <strong>i</strong> at the left of the <strong>Parting Placer Tool</strong> panel title opens the add-on's info. The gear at the right end of the title opens a small menu of settings and clean-up tools. This page covers the <strong>i</strong>, then the gear menu from top to bottom.</p>
+<figure class="spp-media spp-figure"><img src="../img/spp-header-01-icons-v200.png" alt="Parting Placer Tool panel title with an i button before the title and a gear at its right end. The gear menu is open: Sync From Original ticked, Relationship Lines, Empty Size, Repair Partings and Reset Partings" loading="lazy"><figcaption>[1] The panel title with the i on the left and the gear menu open on the right</figcaption></figure>
+
+
 
 
 
@@ -184,8 +190,15 @@
 
 
 
+<h4 id="gear-menu">Gear Menu<a class="headerlink" href="#gear-menu" title="Permanent link">&para;</a></h4>
+<p>The gear at the right end of the panel title. Select it to open the menu.</p>
+<p>It opens with two tick boxes, <strong>Sync From Original</strong> and <strong>Relationship Lines</strong>. Under them sit the <strong>Empty Size</strong> slider, then the <strong>Repair Partings</strong> and <strong>Reset Partings</strong> buttons.</p>
+
+
+
+
 <h4 id="sync-from-original">Sync From Original<a class="headerlink" href="#sync-from-original" title="Permanent link">&para;</a></h4>
-<p>The link icon, first from the left. It is on by default. The icon shows a closed link when on and a broken link when off.</p>
+<p>The first tick box in the gear menu. It is on by default.</p>
 <p>Its tooltip reads: <strong>Match the partings material to the head's original.</strong></p>
 <p>While it is on, edits you make to the head's original material carry across to the partings material. Switch it off to keep the two apart.</p>
 
@@ -197,12 +210,30 @@
 
 
 <h4 id="relationship-lines">Relationship Lines<a class="headerlink" href="#relationship-lines" title="Permanent link">&para;</a></h4>
-<p>The second icon. It switches off the dashed lines Blender draws from every parting's Empty to the head.</p>
+<p>The second tick box in the gear menu. Untick it to switch off the dashed lines Blender draws from every parting's Empty to the head.</p>
 <p>It changes nothing in your file. It applies only to the 3D view the panel is in. It has no effect while <strong>Overlays</strong> are switched off.</p>
 
 
+
+
+<h4 id="empty-size">Empty Size<a class="headerlink" href="#empty-size" title="Permanent link">&para;</a></h4>
+<p>The slider in the gear menu, under <strong>Relationship Lines</strong>. It sets how big every parting's Empty draws in the viewport. The default is <strong>0.15</strong>.</p>
+<p>Its tooltip reads: <strong>Display size of every parting Empty in the active style. Blender multiplies it by each Empty's scale, so bigger partings draw bigger axes</strong></p>
+<p>Dragging it resizes the Empties of every parting in the active style, including any you sized by hand. Partings in parked styles keep their size.</p>
+<p>New partings are placed at the slider's size.</p>
+<p>The slider does not read sizes back from your Empties. It shows its own value until you drag it.</p>
+
+
+
+
+
+
+
+
+
+
 <h4 id="repair-partings">Repair Partings<a class="headerlink" href="#repair-partings" title="Permanent link">&para;</a></h4>
-<p>The refresh arrow, third from the left. Repair rebuilds the links between partings, Empties and the material if something has come adrift. It also brings older files up to date, including the limits on the appearance sliders.</p>
+<p>The <strong>Repair Partings</strong> button in the gear menu. Repair rebuilds the links between partings, Empties and the material if something has come adrift. It also brings older files up to date, including the limits on the appearance sliders.</p>
 <p>Run it once in each existing file after you update the add-on.</p>
 <p>In V2 it also moves each parting's warp onto a shared warp image. That stops partings turning magenta once a head carries about 25 of them. Its message then counts the <strong>warp tile node(s) added</strong>.</p>
 
@@ -213,7 +244,7 @@
 <p class="admonition-title">Check Pushed Sliders First</p>
 <p>If a parting's appearance slider sits past its current limit, Repair brings it back to that limit. Check anything you pushed far on purpose before you run it.</p>
 </div>
-<p>Repair and Reset are greyed out until the panel has a head. Set a <strong>Target</strong>, or select a mesh.</p>
+<p><strong>Repair Partings</strong> and <strong>Reset Partings</strong> are greyed out until the panel has a head. Set a <strong>Target</strong>, or select a mesh.</p>
 
 
 
@@ -221,7 +252,7 @@
 
 
 <h4 id="reset-partings">Reset Partings<a class="headerlink" href="#reset-partings" title="Permanent link">&para;</a></h4>
-<p>The trash can, last on the right. Reset removes every parting from the object and puts the material back to its original state.</p>
+<p>The <strong>Reset Partings</strong> button, last in the gear menu. Reset removes every parting from the object and puts the material back to its original state.</p>
 <p>To clear the partings and keep the material you tuned, use <strong>Delete All</strong> in the parting list instead. See <a href="parting-list.html#delete-all">Delete All</a>.</p>
 
 
